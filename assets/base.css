@@ -3815,7 +3815,7 @@ text-component {
     pointer-events: none;
     background-image: linear-gradient(
       -85deg,
-      var(--shimmer-text-color) 30%,
+      var(--shimmer-text-color) 10%,
       var(--shimmer-color-light) 50%,
       var(--shimmer-text-color) 90%
     );
