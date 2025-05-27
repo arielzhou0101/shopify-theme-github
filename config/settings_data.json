@@ -21,6 +21,8 @@
     "type_size_h4": "24",
     "type_size_h5": "18",
     "type_case_h6": "none",
+    "badge_corner_radius": 0,
+    "badge_sale_color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
     "secondary_button_border_width": 0,
     "cart_type": "drawer",
     "popover_border": "none",
