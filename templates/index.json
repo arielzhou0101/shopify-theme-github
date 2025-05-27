@@ -99,7 +99,7 @@
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "custom",
-                    "font": "var(--font-subheading--family)",
+                    "font": "var(--font-accent--family)",
                     "font_size": "1.5rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
@@ -123,7 +123,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h1",
+                    "type_preset": "h2",
                     "font": "var(--font-primary--family)",
                     "font_size": "",
                     "line_height": "normal",
@@ -251,7 +251,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>collection 1</h3>",
+                "text": "<h3>Make Your Workspace Yours</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -290,11 +290,11 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
+            "border_radius": 10,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 10,
-            "padding-inline-end": 10
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "product_card_gallery_hpki3q": {
@@ -673,6 +673,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.products_grid",
       "settings": {
         "collection": "all",
@@ -688,7 +689,7 @@
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-40bd6419-8451-4e96-a61f-a2444aad2f94",
         "padding-block-start": 48,
         "padding-block-end": 78
       }
@@ -823,7 +824,7 @@
         "extend_media": true,
         "color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
         "padding-block-start": 0,
-        "padding-block-end": 48
+        "padding-block-end": 0
       }
     },
     "collection_list_xpBxCm": {
@@ -969,7 +970,6 @@
       "block_order": [
         "group_mfTd9p"
       ],
-      "disabled": true,
       "name": "t:names.collections_bento",
       "settings": {
         "collection_list": [],
@@ -985,7 +985,7 @@
         "icons_shape": "none",
         "section_width": "page-width",
         "gap": 12,
-        "color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
+        "color_scheme": "scheme-40bd6419-8451-4e96-a61f-a2444aad2f94",
         "padding-block-start": 48,
         "padding-block-end": 64
       }
