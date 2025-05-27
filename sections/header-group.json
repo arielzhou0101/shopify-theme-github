@@ -35,7 +35,7 @@
       "settings": {
         "speed": 5,
         "section_width": "full-width",
-        "color_scheme": "",
+        "color_scheme": "scheme-05243a14-aaba-4e60-bc3a-240d2b1b97ff",
         "divider_width": 0,
         "padding-block-start": 15,
         "padding-block-end": 15
@@ -72,7 +72,7 @@
             "color_scheme": "",
             "menu_font_style": "inverse",
             "type_font_primary_link": "primary",
-            "type_font_primary_size": "1.125rem",
+            "type_font_primary_size": "var(--font-size--body-md)",
             "type_case_primary_link": "none",
             "type_font_secondary_link": "secondary",
             "type_case_secondary_link": "none",
