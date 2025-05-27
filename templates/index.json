@@ -251,7 +251,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Make Your Workspace Yours</h3>",
+                "text": "<h3>collection 1</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -673,7 +673,6 @@
           ]
         }
       },
-      "disabled": true,
       "name": "t:names.products_grid",
       "settings": {
         "collection": "all",
@@ -824,7 +823,7 @@
         "extend_media": true,
         "color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 48
       }
     },
     "collection_list_xpBxCm": {
@@ -970,6 +969,7 @@
       "block_order": [
         "group_mfTd9p"
       ],
+      "disabled": true,
       "name": "t:names.collections_bento",
       "settings": {
         "collection_list": [],
