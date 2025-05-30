@@ -14,7 +14,6 @@
       "blocks": {
         "group_mATTUY": {
           "type": "group",
-          "name": "t:names.group",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
@@ -53,7 +52,6 @@
           "blocks": {
             "group_U86Qji": {
               "type": "group",
-              "name": "t:names.group",
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -92,7 +90,6 @@
               "blocks": {
                 "text_nptTQe": {
                   "type": "text",
-                  "name": "Heading",
                   "settings": {
                     "text": "<h2><em>Introducing</em></h2>",
                     "width": "100%",
@@ -149,7 +146,6 @@
             },
             "text_ebNxhf": {
               "type": "text",
-              "name": "Text",
               "settings": {
                 "text": "<p>Bring order to the chaos. When all your tech essentials have a dedicated spot on your desk, you don’t have to waste any time searching for them. </p>",
                 "width": "fit-content",
@@ -183,7 +179,6 @@
       "block_order": [
         "group_mATTUY"
       ],
-      "name": "t:names.hero",
       "settings": {
         "link": "",
         "open_in_new_tab": false,
@@ -249,7 +244,6 @@
           "blocks": {
             "product_list_text_qK4EWG": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>Make Your Workspace Yours</h3>",
                 "width": "fit-content",
@@ -280,7 +274,6 @@
         },
         "static-product-card": {
           "type": "product-card",
-          "name": "t:names.product_card",
           "static": true,
           "settings": {
             "product": "{{ closest.product }}",
@@ -299,7 +292,6 @@
           "blocks": {
             "product_card_gallery_hpki3q": {
               "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
               "settings": {
                 "product": "{{ closest.product }}",
                 "image_ratio": "square",
@@ -316,7 +308,6 @@
             },
             "group_jHUdWN": {
               "type": "group",
-              "name": "t:names.group",
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -355,7 +346,6 @@
               "blocks": {
                 "product_title_gH3cpy": {
                   "type": "product-title",
-                  "name": "t:names.product_title",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "width": "fit-content",
@@ -381,7 +371,6 @@
                 },
                 "price_anAima": {
                   "type": "price",
-                  "name": "t:names.product_price",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "show_sale_price_first": true,
@@ -405,7 +394,6 @@
                 },
                 "swatches_eYcKAz": {
                   "type": "swatches",
-                  "name": "t:names.swatches",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "product_swatches_alignment": "flex-start",
@@ -432,7 +420,6 @@
           ]
         }
       },
-      "name": "t:names.products_grid",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
@@ -447,7 +434,7 @@
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
-        "color_scheme": "scheme-1a4ba001-d98e-4f4c-9ee0-edaea5345f83",
+        "color_scheme": "scheme-077f6800-e810-448b-bc4e-7b8604edcc10",
         "padding-block-start": 48,
         "padding-block-end": 64
       }
@@ -490,7 +477,6 @@
           "blocks": {
             "product_list_text_ggkaeC": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>{{ closest.collection.title }}</h3>",
                 "width": "fit-content",
@@ -521,7 +507,6 @@
         },
         "static-product-card": {
           "type": "product-card",
-          "name": "t:names.product_card",
           "static": true,
           "settings": {
             "product": "{{ closest.product }}",
@@ -540,7 +525,6 @@
           "blocks": {
             "product_card_gallery_Q3MRD7": {
               "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
               "settings": {
                 "product": "{{ closest.product }}",
                 "image_ratio": "square",
@@ -557,7 +541,6 @@
             },
             "group_LEEAPh": {
               "type": "group",
-              "name": "t:names.group",
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -596,7 +579,6 @@
               "blocks": {
                 "product_title_GLKF7R": {
                   "type": "product-title",
-                  "name": "t:names.product_title",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "width": "fit-content",
@@ -622,7 +604,6 @@
                 },
                 "price_LJ7W4K": {
                   "type": "price",
-                  "name": "t:names.product_price",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "show_sale_price_first": true,
@@ -646,7 +627,6 @@
                 },
                 "swatches_HV9t4D": {
                   "type": "swatches",
-                  "name": "t:names.swatches",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "product_swatches_alignment": "flex-start",
@@ -674,7 +654,6 @@
         }
       },
       "disabled": true,
-      "name": "t:names.products_grid",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
@@ -721,7 +700,6 @@
           "blocks": {
             "image_y4ApqF": {
               "type": "image",
-              "name": "t:names.image",
               "settings": {
                 "link": "",
                 "image_ratio": "adapt",
@@ -743,7 +721,6 @@
             },
             "text_Hf79zK": {
               "type": "text",
-              "name": "t:names.heading",
               "settings": {
                 "text": "<h2>Productivity Essentials</h2>",
                 "width": "fit-content",
@@ -815,7 +792,6 @@
           ]
         }
       },
-      "name": "t:names.media_with_text",
       "settings": {
         "media_position": "left",
         "media_width": "medium",
@@ -832,7 +808,6 @@
       "blocks": {
         "group_mfTd9p": {
           "type": "group",
-          "name": "t:names.header",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
@@ -871,7 +846,6 @@
           "blocks": {
             "text_AYrwfM": {
               "type": "text",
-              "name": "t:names.text",
               "settings": {
                 "text": "<h2>Shop by Collection</h2>",
                 "width": "fit-content",
@@ -902,7 +876,6 @@
         },
         "static-collection-card": {
           "type": "collection-card",
-          "name": "t:names.collection_card",
           "static": true,
           "settings": {
             "collection": "{{ closest.collection }}",
@@ -920,7 +893,6 @@
           "blocks": {
             "collection_title_zyBdAJ": {
               "type": "collection-title",
-              "name": "t:names.collection_title",
               "settings": {
                 "collection": "{{ closest.collection }}",
                 "width": "fit-content",
@@ -970,7 +942,6 @@
       "block_order": [
         "group_mfTd9p"
       ],
-      "name": "t:names.collections_bento",
       "settings": {
         "collection_list": [],
         "layout_type": "bento",
