@@ -245,11 +245,11 @@
             "product_list_text_qK4EWG": {
               "type": "_product-list-text",
               "settings": {
-                "text": "<h3>Make Your Workspace Yours</h3>",
+                "text": "<h3>NEW PIECES</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h2",
+                "type_preset": "h3",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
                 "line_height": "normal",
