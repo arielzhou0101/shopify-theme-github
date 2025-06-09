@@ -91,7 +91,7 @@
                 "text_nptTQe": {
                   "type": "text",
                   "settings": {
-                    "text": "",
+                    "text": "<h3><em>Your home deserves a plot twist</em></h3>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -116,7 +116,7 @@
                 "text_m9AcWC": {
                   "type": "text",
                   "settings": {
-                    "text": "<h5><em>Your home deserves a plot twist</em></h5>",
+                    "text": "<h6><a href=\"/collections/all\" title=\"All products\"><em>Explore now</em></a></h6>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
