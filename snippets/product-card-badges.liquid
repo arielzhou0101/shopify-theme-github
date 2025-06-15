@@ -51,7 +51,7 @@
     --badge-text-transform: {{ settings.badge_text_transform }};
   "
 >
-  {% assign custom_tags = "Limited Offer,new in,Bestseller" | split: "," %}
+  {% assign custom_tags = "Limited Offer,New Arrival,Bestseller" | split: "," %}
   {% assign show_badge = false %}
 
   {%- comment -%}
@@ -61,9 +61,9 @@
     {% if tag != 'sale' and custom_tags contains tag %}
       <div class="product-badges__badge product-badges__badge--rectangle
         {% case tag %}
-          {% when 'Limited Offer' %} color-scheme-1
-          {% when 'new in' %} color-scheme-2
-          {% when 'Bestseller' %} color-scheme-3
+          {% when 'Limited Offer' %} color-{{ settings.badge_limited_offer_color_scheme }}
+          {% when 'New Arrival' %} color-{{ settings.badge_new_arrival_color_scheme }}
+          {% when 'Bestseller' %} color-{{ settings.badge_bestseller_color_scheme }}
           {% else %} color-scheme-4
         {% endcase %}
       ">
