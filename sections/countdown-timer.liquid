@@ -1,6 +1,214 @@
+<section
+  class="countdown-timer-wrapper"
+  style="
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+    padding: {{ section.settings.padding }}px;
+    border-radius: {{ section.settings.border_radius }}px;
+    text-align: {{ section.settings.text_alignment }};
+  "
+>
+  <div class="countdown-timer-inner">
+    <div class="countdown-text">
+      <h2 style="margin: 0;">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="countdown-block" id="countdown-{{ section.id }}"></div>
+
+    {% if section.settings.button_label != blank %}
+      <div class="countdown-button">
+        <a
+          href="{{ section.settings.button_link }}"
+          style="
+            background-color: {{ section.settings.button_color }};
+            color: {{ section.settings.button_text_color }};
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 12px;
+          "
+        >
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var countdownElement = document.getElementById("countdown-{{ section.id }}");
+      var endTime = new Date("{{ section.settings.end_time }}").getTime();
+
+      function updateCountdown() {
+        var now = new Date().getTime();
+        var distance = endTime - now;
+
+        if (distance < 0) {
+          countdownElement.innerHTML = "Offer expired";
+          return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML =
+          "<ul class='countdown-list'>" +
+          "<li><strong>" + days + "</strong><span>Days</span></li>" +
+          "<li><strong>" + hours + "</strong><span>Hours</span></li>" +
+          "<li><strong>" + minutes + "</strong><span>Minutes</span></li>" +
+          "<li><strong>" + seconds + "</strong><span>Seconds</span></li>" +
+          "</ul>";
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
+
+  <style>
+    .countdown-timer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .countdown-text,
+    .countdown-block,
+    .countdown-button {
+      flex: 1 1 auto;
+      text-align: inherit;
+    }
+
+    .countdown-list {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .countdown-list li {
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 8px 12px;
+      text-align: center;
+      min-width: 60px;
+    }
+
+    .countdown-list li strong {
+      font-size: 18px;
+      display: block;
+    }
+
+    .countdown-list li span {
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .countdown-timer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .countdown-list {
+        justify-content: center;
+      }
+    }
+  </style>
+</section>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Countdown Timer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Limited Time Offer!"
+    },
+    {
+      "type": "datetime",
+      "id": "end_time",
+      "label": "Countdown End Time"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f6f6f6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius (px)",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer"
+    }
+  ]
+}
 {% endschema %}
