@@ -698,7 +698,7 @@
                     "text_McjMWz": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Dimensions: Dia 23 cm x H 34 cm / Dia 9.1\" x H 13.4\"</p><p>Material: Opaline Glass Diffuser; Aluminium Body</p>",
+                        "text": "<ul><li>Dimensions: Dia 23 cm x H 34 cm / Dia 9.1\" x H 13.4\"</li><li>Material: Opaline Glass Diffuser; Aluminium Body</li></ul>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
