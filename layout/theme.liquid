@@ -31,11 +31,6 @@
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}
-    {% if template contains 'product' and product %}
-  <title>{{ product.metafields.custom.page_title | default: product.title }} – {{ shop.name }}</title>
-{% else %}
-  <title>{{ page_title }} – {{ shop.name }}</title>
-{% endif %}
 
     {{ content_for_header }}
   </head>
