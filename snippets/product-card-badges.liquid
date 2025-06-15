@@ -51,7 +51,7 @@
     --badge-text-transform: {{ settings.badge_text_transform }};
   "
 >
-  {% assign custom_tags = "Limited Offer,New In,Bestseller" | split: "," %}
+  {% assign custom_tags = "Limited Offer,new in,Bestseller" | split: "," %}
   {% assign show_badge = false %}
 
   {%- comment -%}
@@ -62,7 +62,7 @@
       <div class="product-badges__badge product-badges__badge--rectangle
         {% case tag %}
           {% when 'Limited Offer' %} color-scheme-1
-          {% when 'New In' %} color-scheme-2
+          {% when 'new in' %} color-scheme-2
           {% when 'Bestseller' %} color-scheme-3
           {% else %} color-scheme-4
         {% endcase %}
