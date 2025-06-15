@@ -1448,19 +1448,19 @@
       {
         "type": "color_scheme",
         "id": "badge_new_arrival_color_scheme",
-        "label": "t:settings.badge_new_arrival_color_scheme",
+        "label": "New_Arrival",
         "default": "scheme-5"
       },
       {
         "type": "color_scheme",
         "id": "badge_bestseller_color_scheme",
-        "label": "t:settings.badge_bestseller_color_scheme",
+        "label": "Bestseller",
         "default": "scheme-5"
       },
       {
         "type": "color_scheme",
         "id": "badge_limited_offer_color_scheme",
-        "label": "t:settings.badge_limited_offer_color_scheme",
+        "label": "Limited_Offer",
         "default": "scheme-5"
       },
       {
