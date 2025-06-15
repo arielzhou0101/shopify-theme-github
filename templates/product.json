@@ -208,6 +208,7 @@
             "group_X39hBc": {
               "type": "group",
               "name": "Values",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -697,7 +698,7 @@
                     "text_McjMWz": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>This product is crafted with quality materials to ensure durability and performance. Designed with your convenience in mind, it seamlessly fits into your everyday life.</p>",
+                        "text": "<p>Dimensions: Dia 23 cm x H 34 cm / Dia 9.1\" x H 13.4\"</p><p>Material: Opaline Glass Diffuser; Aluminium Body</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
