@@ -61,8 +61,8 @@
     {% if tag != 'sale' and custom_tags contains tag %}
       <div class="product-badges__badge product-badges__badge--rectangle
         {% case tag %}
-          {% when 'Limited' %} color-scheme-1
-          {% when 'New' %} color-scheme-2
+          {% when 'Limited Offer' %} color-scheme-1
+          {% when 'New In' %} color-scheme-2
           {% when 'Bestseller' %} color-scheme-3
           {% else %} color-scheme-4
         {% endcase %}
