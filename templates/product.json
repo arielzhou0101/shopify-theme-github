@@ -698,7 +698,7 @@
                     "text_McjMWz": {
                       "type": "text",
                       "settings": {
-                        "text": "<ul><li>{{ closest.product.metafields.custom.details_text | metafield_tag }}</li></ul>",
+                        "text": "{{ closest.product.metafields.custom.product_details_text | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
