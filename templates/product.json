@@ -692,7 +692,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "Details",
-                    "open_by_default": false
+                    "open_by_default": true
                   },
                   "blocks": {
                     "text_McjMWz": {
