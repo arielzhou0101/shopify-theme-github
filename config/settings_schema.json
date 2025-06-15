@@ -1446,6 +1446,24 @@
         "default": "scheme-5"
       },
       {
+        "type": "color_scheme",
+        "id": "badge_new_arrival_color_scheme",
+        "label": "t:settings.badge_new_arrival_color_scheme",
+        "default": "scheme-5"
+      },
+      {
+        "type": "color_scheme",
+        "id": "badge_bestseller_color_scheme",
+        "label": "t:settings.badge_bestseller_color_scheme",
+        "default": "scheme-5"
+      },
+      {
+        "type": "color_scheme",
+        "id": "badge_limited_offer_color_scheme",
+        "label": "t:settings.badge_limited_offer_color_scheme",
+        "default": "scheme-5"
+      },
+      {
         "type": "header",
         "content": "t:names.typography"
       },
