@@ -4,6 +4,7 @@
   style="
     --bg: {{ section.settings.background_color }};
     --txt: {{ section.settings.text_color }};
+    --heading-gap: {{ section.settings.heading_spacing }}px;
   "
   data-end-time="{{ section.settings.end_time | escape }}"
 >
@@ -107,26 +108,7 @@
       "label": "Text Color",
       "default": "#000000"
     },
-    {
-      "type": "range",
-      "id": "padding",
-      "label": "Padding (px)",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "default": 24
-    },
-    {
-      "type": "select",
-      "id": "text_alignment",
-      "label": "Text Alignment",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "center"
-    },
+
     {
       "type": "text",
       "id": "button_label",
@@ -138,18 +120,7 @@
       "id": "button_link",
       "label": "Button Link"
     },
-    {
-      "type": "color",
-      "id": "button_color",
-      "label": "Button Background Color",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button Text Color",
-      "default": "#ffffff"
-    }
+
   ],
   "presets": [
     {
