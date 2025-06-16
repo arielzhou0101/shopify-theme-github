@@ -1,129 +1,32 @@
 <section
-  class="countdown-timer-wrapper"
+  id="section-{{ section.id }}"
+  class="countdown-timer {% if section.settings.color_scheme == 'light' %}is-light{% else %}is-dark{% endif %}"
   style="
-    background-color: {{ section.settings.background_color }};
-    color: {{ section.settings.text_color }};
-    padding: {{ section.settings.padding }}px;
-    text-align: {{ section.settings.text_alignment }};
+    --bg: {{ section.settings.background_color }};
+    --txt: {{ section.settings.text_color }};
+    --pad: {{ section.settings.padding }}px;
+    --align: {{ section.settings.text_alignment }};
   "
+  data-end-time="{{ section.settings.end_time | escape }}"
 >
-  <div class="countdown-timer-inner">
-    <div class="countdown-text">
+  <div class="inner">
+    <h2 class="heading">{{ section.settings.heading_main }}</h2>
+    <h4 class="subheading">{{ section.settings.heading_sub }}</h4>
 
-      <h2 style="margin: 0;">{{ section.settings.heading_main }}</h2>
-      <h2 style="margin: 0;">{{ section.settings.heading_sub }}</h2>
-    </div>
-
-    <div class="countdown-block" id="countdown-{{ section.id }}"></div>
+    <div class="countdown"></div>
 
     {% if section.settings.button_label != blank %}
-      <div class="countdown-button">
-        <a
-          href="{{ section.settings.button_link }}"
-          style="
-            background-color: {{ section.settings.button_color }};
-            color: {{ section.settings.button_text_color }};
-            padding: 10px 20px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 12px;
-          "
-        >
-          {{ section.settings.button_label }}
-        </a>
-      </div>
+      <a href="{{ section.settings.button_link }}"
+         class="button">
+        {{ section.settings.button_label }}
+      </a>
     {% endif %}
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var countdownElement = document.getElementById("countdown-{{ section.id }}");
-      var endTime = new Date("{{ section.settings.end_time }}").getTime();
-
-      function updateCountdown() {
-        var now = new Date().getTime();
-        var distance = endTime - now;
-
-        if (distance < 0) {
-          countdownElement.innerHTML = "Offer expired";
-          return;
-        }
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdownElement.innerHTML =
-          "<ul class='countdown-list'>" +
-          "<li><strong>" + days + "</strong><span>Days</span></li>" +
-          "<li><strong>" + hours + "</strong><span>Hours</span></li>" +
-          "<li><strong>" + minutes + "</strong><span>Minutes</span></li>" +
-          "<li><strong>" + seconds + "</strong><span>Seconds</span></li>" +
-          "</ul>";
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    });
-  </script>
-
-  <style>
-    .countdown-timer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .countdown-text,
-    .countdown-block,
-    .countdown-button {
-      flex: 1 1 auto;
-      text-align: inherit;
-    }
-
-    .countdown-list {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .countdown-list li {
-      background: rgba(255,255,255,0.1);
-      border-radius: 6px;
-      padding: 8px 12px;
-      text-align: center;
-      min-width: 60px;
-    }
-
-    .countdown-list li strong {
-      font-size: 18px;
-      display: block;
-    }
-
-    .countdown-list li span {
-      font-size: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .countdown-timer-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .countdown-list {
-        justify-content: center;
-      }
-    }
-  </style>
 </section>
+
+{{ 'countdown-timer.css' | asset_url | stylesheet_tag }}
+{{ 'countdown-timer.js'  | asset_url | script_tag }}
+
 
 {% schema %}
 {
