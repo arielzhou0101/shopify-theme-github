@@ -1,14 +1,13 @@
 <section
   id="section-{{ section.id }}"
-  class="countdown-timer {% if section.settings.color_scheme == 'light' %}is-light{% else %}is-dark{% endif %}"
+  class="countdown-timer section section--page-width spacing-style gap-style {% if section.settings.color_scheme == 'light' %}is-light{% else %}is-dark{% endif %}"
   style="
     --bg: {{ section.settings.background_color }};
     --txt: {{ section.settings.text_color }};
-    --pad: {{ section.settings.padding }}px;
-    --align: {{ section.settings.text_alignment }};
   "
   data-end-time="{{ section.settings.end_time | escape }}"
 >
+
   <div class="page-width countdown-layout">
     <!-- 左侧：标题 -->
     <div class="countdown-heading">
