@@ -10,21 +10,23 @@
   data-end-time="{{ section.settings.end_time | escape }}"
 >
   <div class="inner">
-    {%- assign h_tag = section.settings.heading_typography | replace: 'heading-', 'h' -%}
-<{{ h_tag }} class="heading">{{ section.settings.heading_main }}</{{ h_tag }}>
+    <div class="text-group">
+      {%- assign h_tag = section.settings.heading_typography | replace: 'heading-', 'h' -%}
+      <{{ h_tag }} class="heading">{{ section.settings.heading_main }}</{{ h_tag }}>
 
-{%- assign sh_tag = section.settings.subheading_typography | replace: 'heading-', 'h' -%}
-<{{ sh_tag }} class="subheading">{{ section.settings.heading_sub }}</{{ sh_tag }}>
+      {%- assign sh_tag = section.settings.subheading_typography | replace: 'heading-', 'h' -%}
+      <{{ sh_tag }} class="subheading">{{ section.settings.heading_sub }}</{{ sh_tag }}>
+    </div>
 
     <div class="countdown"></div>
 
     {% if section.settings.button_label != blank %}
-      <a href="{{ section.settings.button_link }}"
-         class="button">
+      <a href="{{ section.settings.button_link }}" class="button">
         {{ section.settings.button_label }}
       </a>
     {% endif %}
   </div>
+
 </section>
 
 {{ 'countdown-timer.css' | asset_url | stylesheet_tag }}

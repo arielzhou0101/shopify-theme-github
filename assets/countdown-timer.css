@@ -8,6 +8,12 @@
 .list li{min-width:70px;padding:.5rem .75rem;border-radius:6px;background:rgba(255,255,255,.1);text-align:center}
 .list strong{display:block;font-size:1.5rem;line-height:1}
 .list span{font-size:.625rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 /* 按钮沿用主题 class；如 Dawn 叫 .button */
 .countdown-timer .button{white-space:nowrap}
 @media(max-width:768px){
