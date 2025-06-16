@@ -1,0 +1,15 @@
+/* ========== Countdown Timer ========== */
+.countdown-timer{padding:var(--pad,24px) 0;background:var(--bg,#631c0f);color:var(--txt,#fff);text-align:var(--align,center)}
+.countdown-timer .inner{max-width:1200px;margin:0 auto;display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
+.countdown-timer .heading{margin:0}
+.countdown-timer .subheading{margin:0;font-weight:400;opacity:.8}
+.countdown-timer .countdown{flex:1}
+.countdown-timer .list{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.list li{min-width:70px;padding:.5rem .75rem;border-radius:6px;background:rgba(255,255,255,.1);text-align:center}
+.list strong{display:block;font-size:1.5rem;line-height:1}
+.list span{font-size:.625rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
+/* 按钮沿用主题 class；如 Dawn 叫 .button */
+.countdown-timer .button{white-space:nowrap}
+@media(max-width:768px){
+  .countdown-timer .inner{flex-direction:column;text-align:center}
+}
