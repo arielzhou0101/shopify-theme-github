@@ -1127,11 +1127,27 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "countdown_timer_Uk8wCz": {
+      "type": "countdown-timer",
+      "name": "Countdown Timer",
+      "settings": {
+        "heading_main": "Limited Time Offer!",
+        "heading_sub": "Limited Time Offer!",
+        "heading_typography": "heading-3",
+        "subheading_typography": "heading-4",
+        "end_time": "2025-06-20T23:59:00Z",
+        "background_color": "#f6f6f6",
+        "text_color": "#000000",
+        "button_label": "Shop Now",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "hero_iLBwPd",
     "product_list_EDUBdR",
+    "countdown_timer_Uk8wCz",
     "product_list_iMHf73",
     "media_with_content_LfPdEJ",
     "collection_list_xpBxCm",
