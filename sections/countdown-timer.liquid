@@ -9,8 +9,9 @@
   "
   data-end-time="{{ section.settings.end_time | escape }}"
 >
-  <div class="inner">
-    <div class="text-group">
+  <div class="page-width countdown-layout">
+    <!-- 左侧：标题 -->
+    <div class="countdown-heading">
       {%- assign h_tag = section.settings.heading_typography | replace: 'heading-', 'h' -%}
       <{{ h_tag }} class="heading">{{ section.settings.heading_main }}</{{ h_tag }}>
 
@@ -18,14 +19,21 @@
       <{{ sh_tag }} class="subheading">{{ section.settings.heading_sub }}</{{ sh_tag }}>
     </div>
 
-    <div class="countdown"></div>
+    <!-- 中间：倒计时 -->
+    <div class="countdown-center">
+      <div class="countdown"></div>
+    </div>
 
+    <!-- 右侧：按钮 -->
     {% if section.settings.button_label != blank %}
-      <a href="{{ section.settings.button_link }}" class="button">
-        {{ section.settings.button_label }}
-      </a>
+      <div class="countdown-button">
+        <a href="{{ section.settings.button_link }}" class="button">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
     {% endif %}
   </div>
+
 
 </section>
 
