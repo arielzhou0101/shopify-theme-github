@@ -10,8 +10,12 @@
   data-end-time="{{ section.settings.end_time | escape }}"
 >
   <div class="inner">
-    <h2 class="heading {{ section.settings.heading_typography }}">{{ section.settings.heading_main }}</h2>
-    <h4 class="subheading {{ section.settings.subheading_typography }}">{{ section.settings.heading_sub }}</h4>
+    {%- assign h_tag = section.settings.heading_typography | replace: 'heading-', 'h' -%}
+<{{ h_tag }} class="heading">{{ section.settings.heading_main }}</{{ h_tag }}>
+
+{%- assign sh_tag = section.settings.subheading_typography | replace: 'heading-', 'h' -%}
+<{{ sh_tag }} class="subheading">{{ section.settings.heading_sub }}</{{ sh_tag }}>
+
     <div class="countdown"></div>
 
     {% if section.settings.button_label != blank %}
