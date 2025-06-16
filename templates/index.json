@@ -207,23 +207,6 @@
         "padding-block-end": 31
       }
     },
-    "countdown_timer_xeVKAV": {
-      "type": "countdown-timer",
-      "name": "Countdown Timer",
-      "settings": {
-        "heading": "Limited Time Offer!",
-        "end_time": "2025-06-20T23:59:00Z",
-        "background_color": "#82a31a",
-        "text_color": "#000000",
-        "padding": 32,
-        "border_radius": 0,
-        "text_alignment": "center",
-        "button_label": "Shop Now",
-        "button_link": "",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff"
-      }
-    },
     "product_list_EDUBdR": {
       "type": "product-list",
       "blocks": {
@@ -982,7 +965,6 @@
   },
   "order": [
     "hero_iLBwPd",
-    "countdown_timer_xeVKAV",
     "product_list_EDUBdR",
     "product_list_iMHf73",
     "media_with_content_LfPdEJ",
