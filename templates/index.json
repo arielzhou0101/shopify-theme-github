@@ -603,11 +603,73 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "editorial_photo_wall_HMNq79": {
+      "type": "editorial-photo-wall",
+      "blocks": {
+        "text_4gheQK": {
+          "type": "text",
+          "settings": {
+            "text": "Shop by image"
+          }
+        },
+        "image_JHBih6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/French-Style-Lemon-Embroidery-Table-Lamp-lit-dark_1c8dd1d9-24ce-40dc-8943-70262efd31c8.jpg",
+            "alt": "Placeholder alt text",
+            "caption": "Placeholder caption",
+            "link": "/"
+          }
+        },
+        "image_mNWWgT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/J.Adams_Co_scandinavian-stone-decor-lamp-desk-scene.webp",
+            "alt": "Placeholder alt text",
+            "caption": "Placeholder caption",
+            "link": "/"
+          }
+        },
+        "image_Ww8NBt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Tradition_Herman_SHY3_Scandinavian_Desk_Lamp_with_Opal_Glass_Cream_Marble_Walnut_Base_bedroom_scene_illuminated.jpg",
+            "alt": "Placeholder alt text",
+            "caption": "Placeholder caption",
+            "link": "/"
+          }
+        },
+        "image_r7zjke": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Colorful-Stained-Glass-Vintage-Table-Lamp-closeup.jpg",
+            "alt": "Placeholder alt text",
+            "caption": "Placeholder caption",
+            "link": "/"
+          }
+        }
+      },
+      "block_order": [
+        "text_4gheQK",
+        "image_JHBih6",
+        "image_mNWWgT",
+        "image_Ww8NBt",
+        "image_r7zjke"
+      ],
+      "name": "Editorial Photo Wall",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding_block_start": 48,
+        "padding_block_end": 48
+      }
     }
   },
   "order": [
     "hero_iLBwPd",
     "product_list_EDUBdR",
-    "collection_list_yddJYY"
+    "collection_list_yddJYY",
+    "editorial_photo_wall_HMNq79"
   ]
 }
