@@ -1,59 +1,55 @@
-.editorial-photo-wall {
-    padding-block: var(--pad-y)
-}
-
-.editorial-photo__grid {
+.editorial-collection__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 1fr;
     gap: var(--gap-xl);
 }
 
-.editorial-photo__spacer {
-    aspect-ratio: 1
+.editorial-collection__spacer {
+    aspect-ratio: 1;
 }
 
-.editorial-photo__grid img {
+.editorial-collection__item-0,
+.editorial-collection__item-1,
+.editorial-collection__item-2,
+.editorial-collection__item-3 {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    overflow: hidden;
 }
 
-/* 同步 Dawn 的 mobile 规则 */
-@media(max-width:768px) {
-    .editorial-photo__grid {
+@media (max-width: 768px) {
+    .editorial-collection__grid {
         display: flex;
         flex-direction: column;
-        gap: calc(var(--gap-xl)*1.5)
+        gap: var(--gap-2xl);
     }
 
-    .editorial-photo__spacer {
-        display: none
+    .editorial-collection__spacer {
+        display: none;
     }
 
-    .editorial-photo__item-0 {
+    .editorial-collection__item-0 {
         width: 66%;
         align-self: flex-start;
-        aspect-ratio: 4/5
+        aspect-ratio: 4 / 5;
     }
 
-    .editorial-photo__item-1 {
+    .editorial-collection__item-1 {
         width: 83%;
         align-self: flex-end;
-        aspect-ratio: 5/5
+        aspect-ratio: 5 / 5;
     }
 
-    .editorial-photo__item-2 {
+    .editorial-collection__item-2 {
         width: 83%;
         align-self: flex-start;
-        aspect-ratio: 8/6
+        aspect-ratio: 8 / 6;
     }
 
-    .editorial-photo__item-3 {
+    .editorial-collection__item-3 {
         width: 100%;
         align-self: center;
-        aspect-ratio: 8/6
+        aspect-ratio: 8 / 6;
     }
-
-    /* 之后重复序列同样效果 */
 }
