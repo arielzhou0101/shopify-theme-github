@@ -19,23 +19,40 @@
           assign grid_set    = i | divided_by: 8
           assign idx         = i | modulo: 8
           case idx
-            when 0
-              assign col = '2 / span 4'  | assign row = 1  | assign span = 5
-            when 1
-              assign col = '7 / span 5'  | assign row = 3  | assign span = 5
-            when 2
-              assign col = '1 / span 8'  | assign row = 9  | assign span = 6
-            when 3
-              assign col = '3 / span 8'  | assign row = 16 | assign span = 6
-            when 4
-              assign col = '7 / span 5'  | assign row = 23 | assign span = 5
-            when 5
-              assign col = '2 / span 4'  | assign row = 25 | assign span = 5
-            when 6
-              assign col = '5 / span 8'  | assign row = 31 | assign span = 6
-            when 7
-              assign col = '2 / span 8'  | assign row = 38 | assign span = 6
-          endcase
+  when 0
+    assign col = '2 / span 4'
+    assign row = 1
+    assign span = 5
+  when 1
+    assign col = '7 / span 5'
+    assign row = 3
+    assign span = 5
+  when 2
+    assign col = '1 / span 8'
+    assign row = 9
+    assign span = 6
+  when 3
+    assign col = '3 / span 8'
+    assign row = 16
+    assign span = 6
+  when 4
+    assign col = '7 / span 5'
+    assign row = 23
+    assign span = 5
+  when 5
+    assign col = '2 / span 4'
+    assign row = 25
+    assign span = 5
+  when 6
+    assign col = '5 / span 8'
+    assign row = 31
+    assign span = 6
+  when 7
+    assign col = '2 / span 8'
+    assign row = 38
+    assign span = 6
+endcase
+
           assign row = row | plus: grid_set | times: 44
         -%}
 
