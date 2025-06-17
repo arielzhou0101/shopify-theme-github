@@ -5,18 +5,17 @@
 
 <section class="section editorial-collection color-{{ section.settings.color_scheme }}">
   <div class="section__content section__content--{{ section.settings.section_width }}" style="padding-block-start: {{ section.settings.padding_block_start | append: 'px' }}; padding-block-end: {{ section.settings.padding_block_end | append: 'px' }};">
-    {% render 'blocks', blocks: section.blocks %}
-
-    {% assign items = '' | split: ',' %}
-
     {% for block in section.blocks %}
-      {% if block.type == 'image' %}
-        {% assign image = block.settings.image %}
-        {% assign caption = block.settings.caption %}
-        {% assign link = block.settings.link %}
-        {% assign alt = block.settings.alt %}
+      {% case block.type %}
+        {% when 'text' %}
+          {% render 'text', block: block %}
 
-        {% capture item %}
+        {% when 'image' %}
+          {% assign image = block.settings.image %}
+          {% assign caption = block.settings.caption %}
+          {% assign link = block.settings.link %}
+          {% assign alt = block.settings.alt %}
+
           <div class="collection-card collection-card--image-bg collection-card--flexible-aspect-ratio">
             {% if link != blank %}<a class="collection-card__link" href="{{ link }}">{% endif %}
               {% if image != blank %}
@@ -38,13 +37,8 @@
               </div>
             </div>
           </div>
-        {% endcapture %}
-
-        {% assign items = items | push: item %}
-      {% endif %}
+      {% endcase %}
     {% endfor %}
-
-    {% render 'editorial-collection-grid', items: items %}
   </div>
 </section>
 
@@ -92,37 +86,52 @@
   ],
   "blocks": [
     {
-      "type": "group",
-      "name": "Header",
-      "settings": {
-        "content_direction": "column",
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "gap": 16,
-        "width": "fill",
-        "custom_width": 100,
-        "width_mobile": "fill",
-        "custom_width_mobile": 100,
-        "padding-block-start": 0,
-        "padding-block-end": 0,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0,
-        "inherit_color_scheme": true
-      },
-      "blocks": {
-        "heading": {
+      "type": "text",
+      "name": "Heading",
+      "settings": [
+        {
           "type": "text",
-          "name": "Heading",
-          "settings": {
-            "text": "<h3>Shop by image</h3>",
-            "type_preset": "h3",
-            "width": "fit-content",
-            "alignment": "left",
-            "padding-block-end": 16
-          }
+          "id": "text",
+          "label": "Heading text",
+          "default": "<h3>Shop by image</h3>"
+        },
+        {
+          "type": "select",
+          "id": "type_preset",
+          "label": "Type preset",
+          "options": [
+            { "value": "rte", "label": "Default" },
+            { "value": "h1", "label": "Heading 1" },
+            { "value": "h2", "label": "Heading 2" },
+            { "value": "h3", "label": "Heading 3" },
+            { "value": "h4", "label": "Heading 4" },
+            { "value": "h5", "label": "Heading 5" },
+            { "value": "h6", "label": "Heading 6" }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Text alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "range",
+          "id": "padding-block-end",
+          "label": "Bottom padding",
+          "min": 0,
+          "max": 64,
+          "step": 4,
+          "default": 16,
+          "unit": "px"
         }
-      },
-      "block_order": ["heading"]
+      ]
     },
     {
       "type": "image",
@@ -160,6 +169,7 @@
       "name": "Editorial Photo Wall",
       "category": "Image",
       "blocks": [
+        { "type": "text" },
         { "type": "image", "settings": { "caption": "First image" } },
         { "type": "image", "settings": { "caption": "Second image" } },
         { "type": "image", "settings": { "caption": "Third image" } },
