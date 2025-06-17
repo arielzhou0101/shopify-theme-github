@@ -63,17 +63,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
     gap: var(--block-gap-mobile, 24px);
   }
 
   .countdown-heading,
   .countdown-center,
   .countdown-button {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-  }
-
-  .countdown-button {
-    margin-top: 0; /* 已由 gap 控制间距 */
+    padding-right: 0;
   }
 }
