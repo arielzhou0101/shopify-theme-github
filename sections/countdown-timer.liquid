@@ -2,16 +2,15 @@
   id="section-{{ section.id }}"
   class="countdown-timer section section--page-width spacing-style gap-style {% if section.settings.color_scheme == 'light' %}is-light{% else %}is-dark{% endif %}"
   style="
-  --bg: {{ section.settings.background_color }};
-  --txt: {{ section.settings.text_color }};
-  --heading-gap: {{ section.settings.heading_spacing }}px;
-  --block-gap-mobile: {{ section.settings.block_spacing_mobile }}px;
-  --section-padding: {{ section.settings.section_vertical_padding }}px;
-"
+    --bg: {{ section.settings.background_color }};
+    --txt: {{ section.settings.text_color }};
+    --heading-gap: {{ section.settings.heading_spacing }}px;
+    --block-gap-mobile: {{ section.settings.block_spacing_mobile }}px;
+    --section-padding: {{ section.settings.section_vertical_padding }}px;
+  "
 
   data-end-time="{{ section.settings.end_time | escape }}"
 >
-
   <div class="page-width countdown-layout">
     <!-- 左侧：标题 -->
     <div class="countdown-heading">
@@ -36,19 +35,20 @@
       </div>
     {% endif %}
   </div>
-
-
 </section>
 
 {{ 'countdown-timer.css' | asset_url | stylesheet_tag }}
-{{ 'countdown-timer.js'  | asset_url | script_tag }}
-
+{{ 'countdown-timer.js' | asset_url | script_tag }}
 
 {% schema %}
 {
   "name": "Countdown Timer",
   "tag": "section",
   "settings": [
+    {
+      "type": "header",
+      "content": "文案部分"
+    },
     {
       "type": "text",
       "id": "heading_main",
@@ -94,19 +94,27 @@
       ]
     },
     {
-  "type": "range",
-  "id": "heading_spacing",
-  "label": "Spacing between headings (px)",
-  "min": 0,
-  "max": 100,
-  "step": 4,
-  "default": 8
-},
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Spacing between headings (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "结束时间"
+    },
     {
       "type": "text",
       "id": "end_time",
       "label": "Countdown End Time (in ISO format, e.g. 2025-06-20T23:59:00Z)",
       "default": "2025-06-20T23:59:00Z"
+    },
+    {
+      "type": "header",
+      "content": "CTA 按钮"
     },
     {
       "type": "color",
@@ -133,6 +141,10 @@
       "label": "Button Link"
     },
     {
+      "type": "header",
+      "content": "Padding和间距"
+    },
+    {
       "type": "range",
       "id": "block_spacing_mobile",
       "label": "Spacing between blocks (mobile, px)",
@@ -149,9 +161,7 @@
       "max": 100,
       "step": 4,
       "default": 32
-    },
-
-
+    }
   ],
   "presets": [
     {
