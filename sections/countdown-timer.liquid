@@ -2,10 +2,13 @@
   id="section-{{ section.id }}"
   class="countdown-timer section section--page-width spacing-style gap-style {% if section.settings.color_scheme == 'light' %}is-light{% else %}is-dark{% endif %}"
   style="
-    --bg: {{ section.settings.background_color }};
-    --txt: {{ section.settings.text_color }};
-    --heading-gap: {{ section.settings.heading_spacing }}px;
-  "
+  --bg: {{ section.settings.background_color }};
+  --txt: {{ section.settings.text_color }};
+  --heading-gap: {{ section.settings.heading_spacing }}px;
+  --block-gap-mobile: {{ section.settings.block_spacing_mobile }}px;
+  --section-padding: {{ section.settings.section_vertical_padding }}px;
+"
+
   data-end-time="{{ section.settings.end_time | escape }}"
 >
 
@@ -129,6 +132,25 @@
       "id": "button_link",
       "label": "Button Link"
     },
+    {
+      "type": "range",
+      "id": "block_spacing_mobile",
+      "label": "Spacing between blocks (mobile, px)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "section_vertical_padding",
+      "label": "Section vertical padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32
+    },
+
 
   ],
   "presets": [

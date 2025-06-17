@@ -1,5 +1,11 @@
 /* ========== Countdown Timer ========== */
-.countdown-timer{padding:var(--pad,24px) 0;background:var(--bg,#631c0f);color:var(--txt,#fff);text-align:var(--align,center)}
+.countdown-timer {
+  padding-block: var(--section-padding, 32px);
+  background: var(--bg, #631c0f);
+  color: var(--txt, #fff);
+  text-align: center; /* align 已废弃，固定 center 可保留或删除 */
+}
+
 .countdown-timer .inner{max-width:1200px;margin:0 auto;display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
 .countdown-timer .heading{margin:0}
 .countdown-timer .subheading{margin:0;font-weight:400;opacity:.8}
@@ -52,24 +58,22 @@
   padding-right: var(--padding-inline-end, 1.5rem);
 }
 
-
 @media (max-width: 768px) {
   .countdown-layout {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: var(--block-gap-mobile, 24px);
   }
 
   .countdown-heading,
   .countdown-center,
   .countdown-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 1rem;
-  padding-right: 0;
-}
+    text-align: center;
+    width: 100%;
+  }
 
-
+  .countdown-button {
+    margin-top: 0; /* 已由 gap 控制间距 */
+  }
 }
