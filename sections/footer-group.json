@@ -207,7 +207,7 @@
                 "menu_fHeXLe": {
                   "type": "menu",
                   "settings": {
-                    "menu": "",
+                    "menu": "sidebar-menu",
                     "heading": "Help",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
