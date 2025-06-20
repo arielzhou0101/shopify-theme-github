@@ -83,7 +83,7 @@
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 100,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -91,11 +91,11 @@
                 "text_nptTQe": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3><em>Your home deserves a plot twist</em></h3>",
+                    "text": "<h3>Your home deserves a plot twist</h3>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "custom",
+                    "type_preset": "h2",
                     "font": "var(--font-accent--family)",
                     "font_size": "1.5rem",
                     "line_height": "normal",
@@ -107,72 +107,36 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 60,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "text_m9AcWC": {
-                  "type": "text",
+                "button_YxGRxK": {
+                  "type": "button",
+                  "name": "t:names.button",
                   "settings": {
-                    "text": "<h6><a href=\"/collections/all\" title=\"All products\"><em>Explore now</em></a></h6>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h2",
-                    "font": "var(--font-primary--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "label": "Shop now",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
                 "text_nptTQe",
-                "text_m9AcWC"
+                "button_YxGRxK"
               ]
-            },
-            "text_ebNxhf": {
-              "type": "text",
-              "settings": {
-                "text": "",
-                "width": "100%",
-                "max_width": "none",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_U86Qji",
-            "text_ebNxhf"
+            "group_U86Qji"
           ]
         }
       },
@@ -197,7 +161,7 @@
         "section_height": "custom",
         "section_height_custom": 60,
         "color_scheme": "scheme-5",
-        "toggle_overlay": true,
+        "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
