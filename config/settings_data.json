@@ -314,9 +314,9 @@
       },
       "scheme-8": {
         "settings": {
-          "background": "#faf9f1",
+          "background": "#f3ecd3",
           "foreground_heading": "#000000",
-          "foreground": "#000000bd",
+          "foreground": "#4c5f05",
           "primary": "#c3cca6",
           "primary_hover": "#000000",
           "border": "#e6e6e6",
@@ -587,9 +587,9 @@
       },
       "scheme-1a4ba001-d98e-4f4c-9ee0-edaea5345f83": {
         "settings": {
-          "background": "#963c1a",
+          "background": "#f3ecd3",
           "foreground_heading": "#ffffff",
-          "foreground": "#ffffff",
+          "foreground": "#f3ecd3",
           "primary": "#000000",
           "primary_hover": "#82a31a",
           "border": "#e6e6e6",
