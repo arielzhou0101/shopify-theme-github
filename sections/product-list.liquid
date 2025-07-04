@@ -119,44 +119,29 @@
       <div
         class="resource-list__item"
       >
-        {% if section.settings.layout_type == 'editorial' %}
-          {%- liquid
-            assign editorial_photo = product.metafields.custom.editorial_photo
-            assign display_image   = editorial_photo
-            if display_image == blank
-              assign display_image = product.featured_media
-            endif
-            assign editorial_caption = product.metafields.custom.editorial_caption
-          -%}
-          
-          <div class="editorial-item" style="position:relative;height:100%;">
-            <img
-              src="{{ display_image | image_url: width: 1200 }}"
-              alt="{{ product.title | escape }}"
-              loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;"
-            >
-          
-            {%- if editorial_caption != blank -%}
-              <p class="editorial-caption"
-                 style="
-                   position:absolute;
-                   bottom:0.5rem;
-                   left:0.5rem;
-                   margin:0;
-                   color:#000;
-                   font-size:0.875rem;
-                   line-height:1.2;
-                   background:rgba(255,255,255,.7);
-                   padding:0.25rem 0.5rem;">
-                {{ editorial_caption | metafield_tag }}
-              </p>
-            {%- endif -%}
-          </div>
-    
-        {% else %}
-          {% content_for 'block', type: 'product-card', id: 'static-product-card', closest.product: product %}
-        {% endif %}
+        {% liquid
+          assign editorial_photo   = product.metafields.custom.editorial_photo
+          assign display_image     = editorial_photo
+          if display_image == blank
+            assign display_image = product.featured_media
+          endif
+        
+          assign editorial_caption = product.metafields.custom.editorial_caption
+        %}
+        <div class="editorial-item">
+          <img
+            src="{{ display_image | image_url: width: 1200 }}"
+            alt="{{ product.title | escape }}"
+            loading="lazy"
+            class="object-cover w-full h-full"
+          >
+        
+          {% if editorial_caption != blank %}
+            <p class="editorial-caption" style="color:#000;font-size:0.875rem;margin-top:0.5rem;">
+              {{ editorial_caption | metafield_tag }}
+            </p>
+          {% endif %}
+        </div>
         
       </div>
 
