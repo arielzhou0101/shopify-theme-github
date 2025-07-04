@@ -8,14 +8,6 @@
   @param [block] - The block object the snippet is rendered in
 {% enddoc %}
 
-{% assign cm = block.settings.product.metafields.custom.product_card_image %}
-{% if cm != blank %}
-  <p style="color:green;">✅ metafield 存在，文件 ID：{{ cm.id }}</p>
-  <img src="{{ cm | image_url: width: 150 }}" alt="debug" />
-{% else %}
-  <p style="color:red;">❌ metafield 为空</p>
-{% endif %}
-
 
 {% liquid
   assign image_sizes = '(min-width: 750px) 50vw, 100vw'
@@ -317,22 +309,68 @@
     {% endif %}
 
     {% capture slides %}
+      {%- comment -%}
+        ① 如果产品有自定义卡片图 (custom.product_card_image)，先输出一张静态 slide
+      {%- endcomment -%}
+      {% assign card_image_metafield = product.metafields.custom.product_card_image %}
+      {% if card_image_metafield != blank %}
+        {%- comment -%}   图的加载策略：首屏前 5 个 section 用 eager，其余 lazy {%- endcomment -%}
+        {% assign loading = 'lazy' %}
+        {% assign sizes   = lazy_image_sizes %}
+        {% if section.index == nil or section.index < 5 %}
+          {% assign loading = 'eager' %}
+          {% assign sizes   = image_sizes %}
+        {% endif %}
+    
+        {%- capture slideshow_children -%}
+          {{ card_image_metafield
+            | image_url: width: 1946
+            | image_tag:
+              widths: widths,
+              alt: product.title,
+              sizes: sizes,
+              loading: loading,
+              class: 'product-media__image'
+          }}
+        {%- endcapture -%}
+    
+        {%- render 'slideshow-slide',
+          slide_id: 'metafield',         # 唯一 ID，避免与 media.id 冲突
+          index: 0,                      # 置于第一张
+          children: slideshow_children,
+          class: 'product-media-container'
+        -%}
+      {% endif %}
+    
+      {%- comment -%}
+        ② 再正常循环 product.media
+      {%- endcomment -%}
       {% for media in all_media %}
         {% assign loading = 'lazy' %}
-        {% assign sizes = lazy_image_sizes %}
-
+        {% assign sizes   = lazy_image_sizes %}
         {% if forloop.first and section.index == nil or section.index < 5 %}
           {% assign loading = 'eager' %}
-          {% assign sizes = image_sizes %}
+          {% assign sizes   = image_sizes %}
         {% endif %}
-
+    
         {% assign attributes = '' %}
-        {% capture slideshow_children %}
-          {%- render 'product-media', media: media, sizes: sizes, widths: widths, loading: loading, preview_image_only: true -%}
-        {% endcapture %}
+        {%- capture slideshow_children -%}
+          {%- render 'product-media',
+            media: media,
+            sizes: sizes,
+            widths: widths,
+            loading: loading,
+            preview_image_only: true
+          -%}
+        {%- endcapture -%}
+    
         {% capture class %}
-          product-media-container media-fit product-media-container--{{ media.media_type }}{% if constrain_to_viewport %} constrain-height{% endif %}
+          product-media-container
+          media-fit
+          product-media-container--{{ media.media_type }}
+          {% if constrain_to_viewport %}constrain-height{% endif %}
         {% endcapture %}
+    
         {% assign hidden = false %}
         {% if variant_images contains media.src %}
           {% assign attributes = 'variant-image' %}
@@ -340,9 +378,21 @@
             {% assign hidden = true %}
           {% endunless %}
         {% endif %}
-        {% render 'slideshow-slide', slide_id: media.id, index: forloop.index, children: slideshow_children, class: class, attributes: attributes, hidden: hidden, media_fit: media_fit %}
+    
+        {%- render 'slideshow-slide',
+          slide_id: media.id,
+          index: forloop.index
+            | plus: (card_image_metafield != blank)   # 如果前面插了 metafield，要把索引往后偏移
+          ,
+          children: slideshow_children,
+          class: class,
+          attributes: attributes,
+          hidden: hidden,
+          media_fit: media_fit
+        -%}
       {% endfor %}
     {% endcapture %}
+    
 
     {% assign slideshow_attributes = '' %}
     {% if hover_behavior == 'none' %}
@@ -350,7 +400,7 @@
     {% endif %}
     {% render 'slideshow',
       ref: 'slideshow',
-      initial_slide: selected_variant_image_index,
+      initial_slide: 0,
       slides: slides,
       slide_count: all_media.size,
       show_arrows: show_arrows,
