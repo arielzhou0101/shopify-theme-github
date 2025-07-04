@@ -8,6 +8,7 @@
   @param [block]    – The block object the snippet is rendered in
 {% enddoc %}
 
+
 {% liquid
   assign product              = block.settings.product
   assign card_image_metafield = product.metafields.custom.product_card_image
@@ -284,15 +285,20 @@
     {% endif %}
 
     {% capture slides %}
-      {%- if metafield_present -%}
+      {%- comment -%}
+        ① 如果产品有自定义卡片图 (custom.product_card_image)，先输出一张静态 slide
+      {%- endcomment -%}
+      {% assign card_image_metafield = product.metafields.custom.product_card_image %}
+      {% if card_image_metafield != blank %}
+        {%- comment -%}   图的加载策略：首屏前 5 个 section 用 eager，其余 lazy {%- endcomment -%}
         {% assign loading = 'lazy' %}
         {% assign sizes   = lazy_image_sizes %}
         {% if section.index == nil or section.index < 5 %}
           {% assign loading = 'eager' %}
           {% assign sizes   = image_sizes %}
         {% endif %}
-
-        {% capture slideshow_children %}
+    
+        {%- capture slideshow_children -%}
           {{ card_image_metafield
             | image_url: width: 1946
             | image_tag:
@@ -300,62 +306,73 @@
               alt: product.title,
               sizes: sizes,
               loading: loading,
-              class: 'product-media__image' }}
-        {% endcapture %}
-
-        {% render 'slideshow-slide',
-          slide_id: 'metafield',
-          index: 0,
+              class: 'product-media__image'
+          }}
+        {%- endcapture -%}
+    
+        {%- render 'slideshow-slide',
+          slide_id: 'metafield',         # 唯一 ID，避免与 media.id 冲突
+          index: 0,                      # 置于第一张
           children: slideshow_children,
-          class: 'product-media-container' %}
-      {%- endif -%}
-
+          class: 'product-media-container'
+        -%}
+      {% endif %}
+    
+      {%- comment -%}
+        ② 再正常循环 product.media
+      {%- endcomment -%}
       {% for media in all_media %}
         {% assign loading = 'lazy' %}
-        {% assign sizes   = lazy_image_sizes %}
+        {% assign sizes = lazy_image_sizes %}
+
         {% if forloop.first and section.index == nil or section.index < 5 %}
           {% assign loading = 'eager' %}
-          {% assign sizes   = image_sizes %}
+          {% assign sizes = image_sizes %}
         {% endif %}
-
-        {% capture slideshow_children %}
-          {% render 'product-media',
+    
+        {% assign attributes = '' %}
+        {%- capture slideshow_children -%}
+          {%- render 'product-media',
             media: media,
             sizes: sizes,
             widths: widths,
             loading: loading,
-            preview_image_only: true %}
-        {% endcapture %}
-
+            preview_image_only: true
+          -%}
+        {%- endcapture -%}
+    
         {% capture class %}
-          product-media-container
-          media-fit
-          product-media-container--{{ media.media_type }}
-          {% if constrain_to_viewport %}constrain-height{% endif %}
+          product-media-container media-fit product-media-container--{{ media.media_type }}{% if constrain_to_viewport %} constrain-height{% endif %}
         {% endcapture %}
-
-        {% assign attributes = '' %}
-        {% assign hidden     = false %}
+    
+        {% assign hidden = false %}
         {% if variant_images contains media.src %}
           {% assign attributes = 'variant-image' %}
           {% unless forloop.first %}{% assign hidden = true %}{% endunless %}
         {% endif %}
-
-        {% render 'slideshow-slide',
-          slide_id:  media.id,
-          index:     forloop.index | plus: metafield_present,
-          children:  slideshow_children,
-          class:     class,
+    
+        {%- render 'slideshow-slide',
+          slide_id: media.id,
+          index: forloop.index
+            | plus: (card_image_metafield != blank)   # 如果前面插了 metafield，要把索引往后偏移
+          ,
+          children: slideshow_children,
+          class: class,
           attributes: attributes,
-          hidden:    hidden,
-          media_fit: media_fit %}
+          hidden: hidden,
+          media_fit: media_fit
+        -%}
       {% endfor %}
     {% endcapture %}
+    
 
-    {% assign slideshow_attributes = hover_behavior == 'none' ? 'disabled="true"' : '' %}
+    {% assign slideshow_attributes = '' %}
+    {% if hover_behavior == 'none' %}
+      {% assign slideshow_attributes = 'disabled="true"' %}
+    {% endif %}
     {% render 'slideshow',
       ref: 'slideshow',
-      initial_slide: 0,
+      initial_slide: selected_variant_image_index,
       slides: slides,
       slide_count: slide_total,
       show_arrows: show_arrows,
