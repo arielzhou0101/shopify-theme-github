@@ -8,10 +8,13 @@
   @param [block] - The block object the snippet is rendered in
 {% enddoc %}
 
-{% comment %}
-调试：查看 metafield 是否非空
-{% endcomment %}
-{{ block.settings.product.metafields.custom.product_card_image | json }}
+{% assign cm = block.settings.product.metafields.custom.product_card_image %}
+{% if cm != blank %}
+  <p style="color:green;">✅ metafield 存在，文件 ID：{{ cm.id }}</p>
+  <img src="{{ cm | image_url: width: 150 }}" alt="debug" />
+{% else %}
+  <p style="color:red;">❌ metafield 为空</p>
+{% endif %}
 
 
 {% liquid
