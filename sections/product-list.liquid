@@ -119,7 +119,30 @@
       <div
         class="resource-list__item"
       >
-        {% content_for 'block', type: 'product-card', id: 'static-product-card', closest.product: product %}
+        {% liquid
+          assign editorial_photo   = product.metafields.custom.editorial_photo
+          assign display_image     = editorial_photo
+          if display_image == blank
+            assign display_image = product.featured_media
+          endif
+        
+          assign editorial_caption = product.metafields.custom.editorial_caption
+        %}
+        <div class="editorial-item">
+          <img
+            src="{{ display_image | image_url: width: 1200 }}"
+            alt="{{ product.title | escape }}"
+            loading="lazy"
+            class="object-cover w-full h-full"
+          >
+        
+          {% if editorial_caption != blank %}
+            <p class="editorial-caption" style="color:#000;font-size:0.875rem;margin-top:0.5rem;">
+              {{ editorial_caption | metafield_tag }}
+            </p>
+          {% endif %}
+        </div>
+        
       </div>
 
       {% unless forloop.last %}
