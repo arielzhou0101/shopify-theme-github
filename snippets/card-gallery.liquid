@@ -8,6 +8,12 @@
   @param [block] - The block object the snippet is rendered in
 {% enddoc %}
 
+{% comment %}
+调试：查看 metafield 是否非空
+{% endcomment %}
+{{ block.settings.product.metafields.custom.product_card_image | json }}
+
+
 {% liquid
   #####  ❰❰❰ 新增 / 修改开始 ❱❱❱
   # 读取自定义 metafield 图片，优先级高于产品首图
