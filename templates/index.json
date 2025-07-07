@@ -738,7 +738,7 @@
       },
       "name": "t:names.products_editorial",
       "settings": {
-        "collection": "frontpage",
+        "collection": "test",
         "layout_type": "editorial",
         "carousel_on_mobile": false,
         "max_products": 4,
@@ -753,7 +753,7 @@
         "gap": 64,
         "color_scheme": "scheme-1",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 100
       }
     }
   },
