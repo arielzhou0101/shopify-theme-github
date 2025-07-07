@@ -131,8 +131,9 @@
           -%}
           
           <div class="editorial-item layout-panel-flex layout-panel-flex--column" style="height:100%;">
-            <!-- media 容器：行高仍靠 aspect-ratio:99 压扁 -->
-            <div class="editorial-item__media" style="flex:1 1 auto;height:100%;--gallery-aspect-ratio:99;">
+            <!-- 改啊改啊 -->
+      
+              <div class="editorial-item__media" style="flex:1 1 auto;height:100%;">
               <img
                 src="{{ display_image | image_url: width: 1200 }}"
                 alt="{{ product.title | escape }}"
@@ -149,7 +150,7 @@
             {% endif %}
           </div>
           
-          
+    
           
         {% else %}
           {% content_for 'block', type: 'product-card', id: 'static-product-card', closest.product: product %}
