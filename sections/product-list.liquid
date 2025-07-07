@@ -119,6 +119,7 @@
       <div
         class="resource-list__item"
       >
+
         {% if section.settings.layout_type == 'editorial' %}
           {%- liquid
             assign editorial_photo   = product.metafields.custom.editorial_photo
@@ -126,22 +127,28 @@
             if display_image == blank
               assign display_image = product.featured_media
             endif
+          
             assign editorial_caption = product.metafields.custom.editorial_caption
           -%}
-        
-          <div class="editorial-item">
-            <img
-              src="{{ display_image | image_url: width: 1200 }}"
-              alt="{{ product.title | escape }}"
-              loading="lazy"
-              class="object-cover w-full h-full"
-            >
-            {%- if editorial_caption != blank -%}
-              <p class="editorial-caption" style="color:#000;font-size:0.875rem;margin-top:0.5rem;">
+          
+          <div class="editorial-item layout-panel-flex layout-panel-flex--column" style="height:100%;">
+            <div class="editorial-item__media" style="flex:1 1 auto;height:100%;">
+              <img
+                src="{{ display_image | image_url: width: 1200 }}"
+                alt="{{ product.title | escape }}"
+                loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;"
+              >
+            </div>
+          
+            {% if editorial_caption != blank %}
+              <p class="editorial-caption"
+                 style="margin-top:0.5rem;color:#000;font-size:0.875rem;line-height:1.2;">
                 {{ editorial_caption | metafield_tag }}
               </p>
-            {%- endif -%}
+            {% endif %}
           </div>
+          
         {% else %}
           {% content_for 'block', type: 'product-card', id: 'static-product-card', closest.product: product %}
         {% endif %}
