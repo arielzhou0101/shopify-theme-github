@@ -19,6 +19,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/e25fd2ed-dd0f-4625-85fb-b19e9fc1f4f7.png",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -100,7 +101,7 @@
         "media_height": "auto",
         "section_width": "full-width",
         "extend_media": true,
-        "color_scheme": "scheme-8",
+        "color_scheme": "scheme-5b44aa89-42e0-4a09-ac77-fd5038ef493c",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
