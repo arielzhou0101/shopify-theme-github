@@ -589,7 +589,7 @@
         "settings": {
           "background": "#f3ecd3",
           "foreground_heading": "#000000",
-          "foreground": "#4c600f",
+          "foreground": "#c3cca6",
           "primary": "#000000",
           "primary_hover": "#82a31a",
           "border": "#e6e6e6",
@@ -606,7 +606,7 @@
           "secondary_button_hover_background": "#dedede",
           "secondary_button_hover_text": "#000000",
           "secondary_button_hover_border": "#000000",
-          "input_background": "#963c1a",
+          "input_background": "#c3cca6",
           "input_text_color": "#ffffff",
           "input_border_color": "#00000014",
           "input_hover_background": "#f5f5f5",

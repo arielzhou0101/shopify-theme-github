@@ -19,6 +19,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/editorial.png",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -100,7 +101,7 @@
         "media_height": "auto",
         "section_width": "full-width",
         "extend_media": true,
-        "color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
+        "color_scheme": "scheme-1a4ba001-d98e-4f4c-9ee0-edaea5345f83",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -479,7 +480,7 @@
         "gap": 12,
         "section_width": "page-width",
         "section_height": "",
-        "color_scheme": "scheme-f6ff9eb0-eea5-4496-90a7-595f9b505b10",
+        "color_scheme": "scheme-1a4ba001-d98e-4f4c-9ee0-edaea5345f83",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
