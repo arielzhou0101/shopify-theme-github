@@ -304,7 +304,7 @@
                   "type": "email-signup",
                   "settings": {
                     "width": "custom",
-                    "custom_width": 43,
+                    "custom_width": 44,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "border_style": "underline",
