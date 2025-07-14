@@ -300,6 +300,29 @@
                   },
                   "blocks": {}
                 },
+                "email_signup_DdqdR6": {
+                  "type": "email-signup",
+                  "settings": {
+                    "width": "custom",
+                    "custom_width": 54,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border_style": "underline",
+                    "border_width": 0,
+                    "border_radius": 100,
+                    "input_type_preset": "paragraph",
+                    "style_class": "button-unstyled",
+                    "display_type": "arrow",
+                    "label": "Sign Up",
+                    "integrated_button": true,
+                    "button_type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "group_iNzwN7": {
                   "type": "group",
                   "name": "Social icons",
@@ -402,6 +425,7 @@
               },
               "block_order": [
                 "text_dFFpdp",
+                "email_signup_DdqdR6",
                 "group_iNzwN7"
               ]
             },
@@ -443,11 +467,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "menu_F6QtGN": {
+                "menu_fHeXLe": {
                   "type": "menu",
                   "settings": {
-                    "menu": "footer",
-                    "heading": "Shop",
+                    "menu": "sidebar-menu",
+                    "heading": "Help",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
@@ -463,11 +487,11 @@
                   },
                   "blocks": {}
                 },
-                "menu_fHeXLe": {
+                "menu_F6QtGN": {
                   "type": "menu",
                   "settings": {
-                    "menu": "sidebar-menu",
-                    "heading": "Help",
+                    "menu": "footer",
+                    "heading": "Shop",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
@@ -506,8 +530,8 @@
                 }
               },
               "block_order": [
-                "menu_F6QtGN",
                 "menu_fHeXLe",
+                "menu_F6QtGN",
                 "menu_CRFABU"
               ]
             }
@@ -516,97 +540,6 @@
             "group_RMNyjY",
             "group_AeYPK8"
           ]
-        },
-        "group_4TMjzy": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24,
-            "width": "custom",
-            "custom_width": 59,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 4,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_zLKXUD": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Subscribe  to our emails</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_zLKXUD"
-          ]
-        },
-        "email_signup_DFhbXT": {
-          "type": "email-signup",
-          "settings": {
-            "width": "custom",
-            "custom_width": 21,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border_style": "underline",
-            "border_width": 0,
-            "border_radius": 100,
-            "input_type_preset": "paragraph",
-            "style_class": "button-unstyled",
-            "display_type": "arrow",
-            "label": "Sign Up",
-            "integrated_button": true,
-            "button_type_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
         },
         "footer_utilities_iTnDrc": {
           "type": "footer-utilities",
@@ -647,8 +580,6 @@
       },
       "block_order": [
         "group_MK6PAh",
-        "group_4TMjzy",
-        "email_signup_DFhbXT",
         "footer_utilities_iTnDrc"
       ],
       "name": "Footer",
