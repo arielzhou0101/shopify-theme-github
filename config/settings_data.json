@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/a-logo-for-the-home-decor-e-commerce-brand--retro-_14.png",
-    "logo_inverse": "shopify://shop_images/a-logo-for-the-home-decor-e-commerce-brand--retro-_14.png",
-    "favicon": "shopify://shop_images/a-logo-for-the-home-decor-e-commerce-brand--retro-_14.png",
+    "logo": "shopify://shop_images/logo-monochrome.png",
+    "logo_inverse": "shopify://shop_images/logo-monochrome.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "type_body_font": "cabin_n4",
     "type_subheading_font": "cabin_n4",
     "type_heading_font": "cabin_n4",
