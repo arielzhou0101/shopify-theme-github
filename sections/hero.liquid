@@ -399,7 +399,8 @@
     >
       {% content_for 'blocks' %}
     </div>
-    {%- comment -%}★ 自动高亮标题 {{- endcomment -%}
+  {%- comment -%} ★ 自动高亮标题 {%- endcomment -%}
+
 {%- if section.settings.highlight_text != blank -%}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
