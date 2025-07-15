@@ -399,6 +399,22 @@
     >
       {% content_for 'blocks' %}
     </div>
+    {%- comment -%}★ 自动高亮标题 {{- endcomment -%}
+{%- if section.settings.highlight_text != blank -%}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const wrap = document.querySelector('#Hero-{{ section.id }} .hero__content-wrapper');
+      if (!wrap) return;
+
+      // 只替换第一次出现的词；i 不区分大小写
+      const pattern = new RegExp({{ section.settings.highlight_text | json }}, 'i');
+      wrap.innerHTML = wrap.innerHTML.replace(
+        pattern,
+        '<span class="heading-accent" style="color: {{ section.settings.highlight_color }};">$&</span>'
+      );
+    });
+  </script>
+{%- endif -%}
   </div>
 </div>
 
@@ -747,6 +763,17 @@
       "default": "solid",
       "visible_if": "{{ section.settings.toggle_overlay }}"
     },
+    {
++      "type": "text",
++      "id": "highlight_text",
++      "label": "Text to highlight"
++    },
++    {
++      "type": "color",
++      "id": "highlight_color",
++      "label": "Highlight color",
++      "default": "#E4572E"
+     },
     {
       "type": "select",
       "id": "gradient_direction",
