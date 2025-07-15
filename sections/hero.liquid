@@ -400,22 +400,32 @@
       {% content_for 'blocks' %}
     </div>
   {%- comment -%} ★ 自动高亮标题 {%- endcomment -%}
-
 {%- if section.settings.highlight_text != blank -%}
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const wrap = document.querySelector('#Hero-{{ section.id }} .hero__content-wrapper');
-      if (!wrap) return;
+    (function () {
+      function highlight() {
+        const wrap = document.querySelector('#Hero-{{ section.id }} .hero__content-wrapper');
+        if (!wrap) return;
 
-      // 只替换第一次出现的词；i 不区分大小写
-      const pattern = new RegExp({{ section.settings.highlight_text | json }}, 'i');
-      wrap.innerHTML = wrap.innerHTML.replace(
-        pattern,
-        '<span class="heading-accent" style="color: {{ section.settings.highlight_color }};">$&</span>'
-      );
-    });
+        // 处理&nbsp;或多空格 —— 把用户输入里的空格通通换成\s+
+        const raw   = {{ section.settings.highlight_text | json }};
+        const regex = new RegExp(raw.replace(/\s+/g, '\\s+'), 'i');
+
+        wrap.innerHTML = wrap.innerHTML.replace(
+          regex,
+          '<span class="heading-accent" style="color: {{ section.settings.highlight_color }};">$&</span>'
+        );
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', highlight, { once: true });
+      } else {
+        highlight();
+      }
+    })();
   </script>
 {%- endif -%}
+
   </div>
 </div>
 
