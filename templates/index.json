@@ -91,7 +91,7 @@
                 "text_BMWcJT": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Your home deserves a plot twist</h3>",
+                    "text": "<h3>Your home deserves a </h3><h3>plot twist</h3>",
                     "width": "fit-content",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -193,6 +193,8 @@
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
+        "highlight_text": "plot twist",
+        "highlight_color": "#ffd903",
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,

@@ -26,6 +26,7 @@
     "type_size_h5": "18",
     "type_font_h6": "accent",
     "type_size_h6": "48",
+    "type_line_height_h6": "display-tight",
     "type_case_h6": "none",
     "badge_new_arrival_color_scheme": "scheme-05243a14-aaba-4e60-bc3a-240d2b1b97ff",
     "badge_bestseller_color_scheme": "scheme-40bd6419-8451-4e96-a61f-a2444aad2f94",
