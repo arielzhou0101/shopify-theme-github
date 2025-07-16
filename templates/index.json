@@ -241,7 +241,7 @@
             "product_list_text_qK4EWG": {
               "type": "_product-list-text",
               "settings": {
-                "text": "<h3>NEW PIECES</h3>",
+                "text": "<h3>New Arrival</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -611,7 +611,7 @@
             "content_direction": "row",
             "vertical_on_mobile": false,
             "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
+            "vertical_alignment": "center",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
@@ -641,7 +641,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>gallery</h3>",
+                "text": "<h3>Gallery</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -780,7 +780,7 @@
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
+        "horizontal_alignment": "center",
         "gap": 64,
         "color_scheme": "scheme-5b44aa89-42e0-4a09-ac77-fd5038ef493c",
         "padding-block-start": 48,
