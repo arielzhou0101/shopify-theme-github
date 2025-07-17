@@ -641,7 +641,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>be inspired by our new findings</h3>",
+                "text": "<h3>be inspired by our </h3><h3>new findings</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
