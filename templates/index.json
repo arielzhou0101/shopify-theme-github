@@ -91,7 +91,7 @@
                 "text_BMWcJT": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>Your home deserves a </h3><h3>plot twist</h3>",
+                    "text": "<h3>YOUR HOME DESERVES</h3><h3>A <strong>PLOT TWIST</strong></h3>",
                     "width": "fit-content",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -245,7 +245,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h2",
+                "type_preset": "h3",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
                 "line_height": "normal",
@@ -645,7 +645,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h2",
+                "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "",
                 "line_height": "normal",
@@ -666,6 +666,7 @@
             "product_list_button_UA8AYE": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
+              "disabled": true,
               "settings": {
                 "label": "View all",
                 "collection": "{{ closest.collection }}",
