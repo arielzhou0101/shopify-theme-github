@@ -17,7 +17,7 @@
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
-            "text": "🎉 Grand Opening! ✨ Free shipping on every order — light up your space for less 🚚    <a href=\"/collections/all\" title=\"All products\">shop now</a>",
+            "text": "🎉 Grand Opening! ✨ Free shipping on every order, light up your space for less 🚚        <a href=\"/collections/all\" title=\"All products\">SHOP NOW</a>",
             "link": "shopify://collections/objects",
             "font": "var(--font-primary--family)",
             "font_size": "var(--font-size--body-md)",
