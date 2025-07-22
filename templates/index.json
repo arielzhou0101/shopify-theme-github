@@ -654,7 +654,7 @@
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "2",
         "columns_gap": 12,
         "rows_gap": 12,
