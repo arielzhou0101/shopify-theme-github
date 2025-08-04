@@ -326,6 +326,7 @@
                 "group_iNzwN7": {
                   "type": "group",
                   "name": "Social icons",
+                  "disabled": true,
                   "settings": {
                     "link": "",
                     "open_in_new_tab": false,
@@ -570,6 +571,7 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
+              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {}
