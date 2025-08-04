@@ -323,6 +323,32 @@
                   },
                   "blocks": {}
                 },
+                "text_XdqtwA": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Phone number: +1 000000000</p><p>Email: customercare@retrochroma.com</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "group_iNzwN7": {
                   "type": "group",
                   "name": "Social icons",
@@ -427,6 +453,7 @@
               "block_order": [
                 "text_dFFpdp",
                 "email_signup_DdqdR6",
+                "text_XdqtwA",
                 "group_iNzwN7"
               ]
             },
@@ -547,7 +574,7 @@
           "name": "t:names.footer_utilities",
           "settings": {
             "divider_thickness": 0,
-            "padding-block-start": 20,
+            "padding-block-start": 0,
             "padding-block-end": 0
           },
           "blocks": {
@@ -562,6 +589,7 @@
             },
             "policy_list": {
               "type": "_footer-policy-list",
+              "disabled": true,
               "static": true,
               "settings": {
                 "font_size": "0.75rem",
@@ -571,7 +599,6 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
-              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {}
