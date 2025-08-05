@@ -327,7 +327,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Phone number: +1 000000000</p><p>Email: customercare@retrochroma.com</p>",
+                    "text": "<p>customercare@retrochroma.com</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
