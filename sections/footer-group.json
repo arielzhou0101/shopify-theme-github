@@ -323,7 +323,7 @@
                   },
                   "blocks": {}
                 },
-                "text_XdqtwA": {
+                "text_dCQwnD": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -453,7 +453,7 @@
               "block_order": [
                 "text_dFFpdp",
                 "email_signup_DdqdR6",
-                "text_XdqtwA",
+                "text_dCQwnD",
                 "group_iNzwN7"
               ]
             },
