@@ -265,7 +265,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "Shipping & Returns",
-                    "open_by_default": false
+                    "open_by_default": true
                   },
                   "blocks": {
                     "text_DNPAct": {
