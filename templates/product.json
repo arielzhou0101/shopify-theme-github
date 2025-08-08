@@ -96,6 +96,7 @@
             },
             "reviews": {
               "type": "review",
+              "disabled": true,
               "settings": {
                 "product": "{{ closest.product }}",
                 "stars_style": "shaded",
@@ -637,13 +638,13 @@
     "17546380909fbbf675": {
       "type": "_blocks",
       "blocks": {
-        "judge_me_reviews_all_reviews_text_JxKnNj": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "judge_me_reviews_review_widget_C9CkCW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         }
       },
       "block_order": [
-        "judge_me_reviews_all_reviews_text_JxKnNj"
+        "judge_me_reviews_review_widget_C9CkCW"
       ],
       "settings": {
         "content_direction": "column",
