@@ -401,12 +401,26 @@
                     "product_swatches_padding_right": 0
                   },
                   "blocks": {}
+                },
+                "review_bzXraR": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "stars_style": "single",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_gH3cpy",
                 "price_anAima",
-                "swatches_eYcKAz"
+                "swatches_eYcKAz",
+                "review_bzXraR"
               ]
             }
           },
@@ -634,12 +648,26 @@
                     "product_swatches_padding_right": 0
                   },
                   "blocks": {}
+                },
+                "review_ki949e": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "stars_style": "single",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_iQBAzx",
                 "price_VRpKPM",
-                "swatches_zVTwbD"
+                "swatches_zVTwbD",
+                "review_ki949e"
               ]
             }
           },
