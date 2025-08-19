@@ -17,7 +17,7 @@
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
-            "text": "🍁 RC Fall Sale is on — 5% off + free shipping — code <strong>RC25FALL</strong>",
+            "text": "🍁 RC Fall Sale is on — 5% off + free shipping with code <strong>RC25FALL</strong>",
             "link": "shopify://collections/all",
             "font": "var(--font-primary--family)",
             "font_size": "var(--font-size--body-md)",
