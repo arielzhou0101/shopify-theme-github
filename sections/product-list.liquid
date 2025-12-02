@@ -54,6 +54,61 @@
   .section-resource-list__content:empty {
     display: none;
   }
+  /* === 手机端强制修复补丁 (Zig-Zag 错落布局) === */
+  @media screen and (max-width: 768px) {
+    /* 1. 容器修复：取消 Grid，改为 Flex 单列 */
+    .resource-list--grid {
+      display: flex !important;
+      flex-direction: column !important;
+      height: auto !important; /* 修复 Footer 侵入 */
+      min-height: auto !important;
+      gap: 30px !important;
+      padding-bottom: 20px !important;
+      width: 100% !important;
+    }
+
+    /* 2. 子元素重置：清除 Grid 坐标 */
+    .resource-list__item {
+      display: block !important;
+      position: relative !important;
+      grid-column: auto !important;
+      grid-row: auto !important;
+      width: 88% !important; /* 统一宽度 */
+      height: auto !important;
+      margin: 0 !important;
+      transform: none !important;
+    }
+
+    /* 3. 奇数靠左 */
+    .resource-list__item:nth-child(odd) {
+      margin-right: auto !important;
+      margin-left: 0 !important;
+    }
+
+    /* 4. 偶数靠右 */
+    .resource-list__item:nth-child(even) {
+      margin-left: auto !important;
+      margin-right: 0 !important;
+    }
+
+    /* 5. 确保内部图片容器正常 */
+    .editorial-item {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+    }
+    
+    .editorial-item img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: cover !important;
+    }
+    
+    .editorial-caption {
+      margin-top: 8px !important;
+      text-align: left !important;
+    }
+  }
 {% endstylesheet %}
 
 {% liquid
