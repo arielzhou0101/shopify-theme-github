@@ -2,13 +2,11 @@
   {{- group.user_agent -}}
 
   {% for rule in group.rules %}
-    {# --- 过滤掉原本的禁止规则，防止冲突 --- #}
     {% unless rule.value contains '/policies/' %}
       {{- rule -}}
     {% endunless %}
   {% endfor %}
 
-  {# --- 强制添加允许规则 --- #}
   {% if group.user_agent.value == '*' %}
     Allow: /policies/
   {% endif %}
