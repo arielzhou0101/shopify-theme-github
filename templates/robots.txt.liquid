@@ -2,14 +2,16 @@
   {{- group.user_agent -}}
 
   {% for rule in group.rules %}
-    {{- rule -}}
+    {# --- 过滤掉原本的禁止规则，防止冲突 --- #}
+    {% unless rule.value contains '/policies/' %}
+      {{- rule -}}
+    {% endunless %}
   {% endfor %}
 
-  {# --- 核心修复：强制允许抓取政策页 --- #}
+  {# --- 强制添加允许规则 --- #}
   {% if group.user_agent.value == '*' %}
     Allow: /policies/
   {% endif %}
-  {# ---------------------------------- #}
 
   {% if group.sitemap != blank %}
     {{- group.sitemap -}}
