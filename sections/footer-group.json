@@ -327,7 +327,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>customercare@retrochroma.com</p>",
+                    "text": "<p>contact us: customercare@retrochroma.com</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -569,6 +569,32 @@
             "group_AeYPK8"
           ]
         },
+        "text_YDEQwK": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Room D07, 8th Floor, Phase II, Kai Tak Factory Building, 99 King Fuk Street, San Po Kong, Hong Kong</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "footer_utilities_iTnDrc": {
           "type": "footer-utilities",
           "name": "t:names.footer_utilities",
@@ -609,6 +635,7 @@
       },
       "block_order": [
         "group_MK6PAh",
+        "text_YDEQwK",
         "footer_utilities_iTnDrc"
       ],
       "name": "Footer",
