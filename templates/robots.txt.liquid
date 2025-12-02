@@ -1,0 +1,17 @@
+{% for group in robots.default_groups %}
+  {{- group.user_agent -}}
+
+  {% for rule in group.rules %}
+    {{- rule -}}
+  {% endfor %}
+
+  {# --- 核心修复：强制允许抓取政策页 --- #}
+  {% if group.user_agent.value == '*' %}
+    Allow: /policies/
+  {% endif %}
+  {# ---------------------------------- #}
+
+  {% if group.sitemap != blank %}
+    {{- group.sitemap -}}
+  {% endif %}
+{% endfor %}
