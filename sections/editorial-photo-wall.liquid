@@ -1,75 +1,90 @@
 {% comment %}
-  Editorial Photo Wall section - based on Collection List (editorial layout)
-  Data source changed to image picker with metadata
+  Editorial Photo Wall - Mobile Fix (Ultimate Version)
 {% endcomment %}
 
 <style>
-  /* === 核心修复代码：手机端强制单列布局 === */
+  /* === 电脑端默认样式 (保持原样) === */
+  .editorial-collection__grid {
+    display: grid;
+    /* 默认 12 列 */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    width: 100%;
+    position: relative;
+  }
+
+  /* === 手机端强制修复 (暴力重置) === */
   @media screen and (max-width: 768px) {
-    /* 1. 把容器改为从上到下的弹性布局 */
+    
+    /* 1. 强制容器变成单列，并撑开高度 */
     .editorial-collection__grid {
       display: flex !important;
       flex-direction: column !important;
-      gap: 30px !important; /* 图片之间的间距 */
-      padding-left: 15px;
-      padding-right: 15px;
-      width: 100% !important;
-      box-sizing: border-box;
+      height: auto !important; /* 修复溢出到 Footer 的问题 */
+      min-height: auto !important;
+      gap: 40px !important; /* 加大间距，防止挤压 */
+      padding: 20px 15px !important;
+      box-sizing: border-box !important;
     }
 
-    /* 2. 暴力重置所有图片块的网格坐标 */
-    .editorial-collection__grid > div {
-      /* !important 用来覆盖 inline style */
-      grid-column: auto !important; 
+    /* 2. 核心大招：选中所有带 style 属性的子元素，强制废除它们的坐标 */
+    .editorial-collection__grid > div,
+    .editorial-collection__grid > div[style] {
+      /* 只要是行内写死的 grid-area / grid-column，全部清空 */
+      grid-column: auto !important;
       grid-row: auto !important;
-      width: 100% !important;
-      margin: 0 !important;
+      grid-area: auto !important;
+      
+      /* 强制回流文档流 */
       position: relative !important;
-      left: auto !important;
       top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      
+      /* 宽度撑满 */
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
       transform: none !important;
+      
+      /* 确保高度自适应 */
+      height: auto !important;
+      min-height: auto !important;
     }
 
-    /* 3. 隐藏在手机上没用的占位符 */
+    /* 3. 隐藏 spacer */
     .editorial-collection__spacer {
       display: none !important;
     }
-    
-    /* 4. 优化卡片内部布局，确保图片撑满 */
+
+    /* 4. 图片卡片强制 100% 宽 */
     .collection-card {
-       width: 100% !important;
-       height: auto !important;
-       min-height: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      padding-bottom: 0 !important; /* 防止 aspect-ratio 撑出多余高度 */
+    }
+
+    .collection-card__image {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      padding-top: 0 !important;
     }
     
     .collection-card__image img {
-       position: relative !important;
-       width: 100% !important;
-       height: auto !important;
-       object-fit: cover;
-    }
-
-    /* 5. 修复文字排版 */
-    .collection-card__content {
-       width: 100%;
-       padding: 10px 0;
-       position: relative !important;
-    }
-  }
-  
-  /* 电脑端保持默认 Grid 布局 */
-  @media screen and (min-width: 769px) {
-    .editorial-collection__grid {
-      display: grid;
-      /* 这里假设你的主题默认定义了 grid，如果没有，可以取消下面这行的注释 */
-      /* grid-template-columns: repeat(12, 1fr); */
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      object-fit: cover !important;
     }
   }
 </style>
 
 <section class="section editorial-collection color-{{ section.settings.color_scheme }}">
   <div class="section__content section__content--{{ section.settings.section_width }}" style="padding-block-start: {{ section.settings.padding_block_start | append: 'px' }}; padding-block-end: {{ section.settings.padding_block_end | append: 'px' }};">
-    <div class="editorial-collection__grid">
+    
+    <div class="editorial-collection__grid" id="editorial-grid-mobile-fix">
       <div class="editorial-collection__spacer"></div>
 
       {% for block in section.blocks %}
