@@ -37,59 +37,8 @@
           },
           "blocks": {}
         },
-        "text_yXxDGE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Email</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_XfiaQp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We love to hear from our customers & clients! </p><p>For customer-related issues, please contact us directly via <span style=\"text-decoration:underline\"><strong>customercare@retrochroma.com</strong></span></p><p>RetroChroma support team are all ears and will reply within <strong>1 business day</strong>. </p><p>For order-related inquiries, like return or refund, please title your email in format of order number + inquiry so your inquiries could be assigned to the right agent.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-primary--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 30,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "text_dWXrnm": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "{{ closest.page.content }}",
             "width": "100%",
@@ -144,66 +93,12 @@
             }
           },
           "block_order": []
-        },
-        "text_Vy4hRW": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Other ways to reach us</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_EqKBLj": {
-          "type": "text",
-          "settings": {
-            "text": "<p></p><p>Address: Room D07, 8th Floor, Phase II, Kai Tak Factory Building, 99 King Fuk Street, San Po Kong, Hong Kong</p><p>Tel: +852 61588111</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-primary--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_fcM3nf",
-        "text_yXxDGE",
-        "text_XfiaQp",
         "text_dWXrnm",
-        "contact_form_jWxXkm",
-        "text_Vy4hRW",
-        "text_EqKBLj"
+        "contact_form_jWxXkm"
       ],
       "settings": {
         "content_direction": "column",
