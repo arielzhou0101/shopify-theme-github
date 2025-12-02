@@ -54,21 +54,22 @@
   .section-resource-list__content:empty {
     display: none;
   }
-  /* === 手机端强制修复补丁 (Zig-Zag 错落布局) === */
+  /* === 手机端强制修复补丁 (Zig-Zag 错落布局 - 仅针对 Editorial 模式) === */
   @media screen and (max-width: 768px) {
-    /* 1. 容器修复：取消 Grid，改为 Flex 单列 */
-    .resource-list--grid {
+    /* 1. 容器修复：只针对 editorial 专用类名 */
+    .resource-list--editorial {
       display: flex !important;
       flex-direction: column !important;
-      height: auto !important; /* 修复 Footer 侵入 */
+      height: auto !important;
       min-height: auto !important;
       gap: 30px !important;
       padding-bottom: 20px !important;
       width: 100% !important;
+      box-sizing: border-box !important;
     }
 
-    /* 2. 子元素重置：清除 Grid 坐标 */
-    .resource-list__item {
+    /* 2. 子元素重置：只重置 editorial 下的 item */
+    .resource-list--editorial .resource-list__item {
       display: block !important;
       position: relative !important;
       grid-column: auto !important;
@@ -77,16 +78,18 @@
       height: auto !important;
       margin: 0 !important;
       transform: none !important;
+      left: auto !important;
+      top: auto !important;
     }
 
     /* 3. 奇数靠左 */
-    .resource-list__item:nth-child(odd) {
+    .resource-list--editorial .resource-list__item:nth-child(odd) {
       margin-right: auto !important;
       margin-left: 0 !important;
     }
 
     /* 4. 偶数靠右 */
-    .resource-list__item:nth-child(even) {
+    .resource-list--editorial .resource-list__item:nth-child(even) {
       margin-left: auto !important;
       margin-right: 0 !important;
     }
@@ -96,19 +99,23 @@
       display: flex !important;
       flex-direction: column !important;
       width: 100% !important;
+      position: relative !important;
     }
     
     .editorial-item img {
       width: 100% !important;
       height: auto !important;
       object-fit: cover !important;
+      display: block !important;
     }
     
     .editorial-caption {
       margin-top: 8px !important;
       text-align: left !important;
+      width: 100% !important;
     }
   }
+  
 {% endstylesheet %}
 
 {% liquid
@@ -135,6 +142,8 @@
         echo '--column-count: ' | append: section.settings.columns | append: ';'
         echo '--column-count-mobile: ' | append: section.settings.mobile_columns | append: ';'
       endcapture
+    when 'editorial'
+      assign classes = 'resource-list--editorial'  
   endcase
 %}
 
