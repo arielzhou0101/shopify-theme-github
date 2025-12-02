@@ -515,26 +515,6 @@
                   },
                   "blocks": {}
                 },
-                "menu_F6QtGN": {
-                  "type": "menu",
-                  "settings": {
-                    "menu": "footer",
-                    "heading": "Shop",
-                    "menu_spacing": 12,
-                    "show_as_accordion": false,
-                    "accordion_icon": "caret",
-                    "accordion_dividers": false,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "heading_preset": "h3",
-                    "link_preset": "paragraph",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
                 "menu_CRFABU": {
                   "type": "menu",
                   "name": "t:names.menu",
@@ -555,12 +535,32 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "menu_F6QtGN": {
+                  "type": "menu",
+                  "settings": {
+                    "menu": "footer",
+                    "heading": "Shop",
+                    "menu_spacing": 12,
+                    "show_as_accordion": false,
+                    "accordion_icon": "caret",
+                    "accordion_dividers": false,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "heading_preset": "h3",
+                    "link_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "menu_fHeXLe",
-                "menu_F6QtGN",
-                "menu_CRFABU"
+                "menu_CRFABU",
+                "menu_F6QtGN"
               ]
             }
           },

@@ -308,6 +308,32 @@
                 "accordion_row_VyFryh",
                 "accordion_row_aaFerA"
               ]
+            },
+            "text_3kG4a6": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<ul><li><a href=\"/pages/how-to-install-different-types-of-retro-chroma-table-lamps\" target=\"_blank\" title=\"How to Install Different Types of Retro Chroma Table Lamps\">Lamp Installation Guide</a></li></ul>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -318,7 +344,8 @@
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "product_description_LfDYCg",
-            "accordion_g8EVVp"
+            "accordion_g8EVVp",
+            "text_3kG4a6"
           ]
         }
       },
