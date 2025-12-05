@@ -499,7 +499,7 @@
                   "type": "menu",
                   "settings": {
                     "menu": "sidebar-menu",
-                    "heading": "Help",
+                    "heading": "Our Policies",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
