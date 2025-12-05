@@ -488,7 +488,7 @@
             "product_list_text_DQGT8g": {
               "type": "_product-list-text",
               "settings": {
-                "text": "<h3>Best Seller</h3>",
+                "text": "<h3>Top picks</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
