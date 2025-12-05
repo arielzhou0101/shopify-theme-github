@@ -327,7 +327,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>contact us: customercare@retrochroma.com</p>",
+                    "text": "<p>Email: customercare@retrochroma.com</p><p>Tel：+852 6158 8111</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
