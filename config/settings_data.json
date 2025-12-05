@@ -997,7 +997,7 @@
   "platform_customizations": {
     "custom_css": [
       "/* 让导航项作为定位容器 */.header__inline-menu .list-menu__item {position: relative;}",
-      "/* 调整下拉菜单的位置，尽量靠近父菜单项 */.header__submenu {left: 50% !important; transform: translateX(-50%);}",
+      "/* 调整下拉菜单的位置，尽量靠近父菜单项 */.header__submenu {left: 100% !important; transform: translateX(-50%);}",
       "/* 如果下拉菜单太宽，可以限制一下最大宽度（按需要删掉/调整） */.header__submenu.list-menu--disclosure {max-width: 220px;}"
     ]
   }
