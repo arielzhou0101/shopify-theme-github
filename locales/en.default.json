@@ -308,6 +308,11 @@
   "shopify": {
     "links": {
       "powered_by_shopify": "operated by Voyz Limited. Powered by shopify."
+    },
+    "checkout": {
+      "shop_policies": {
+        "refund_policy": "Return Policy"
+      }
     }
   }
 }
