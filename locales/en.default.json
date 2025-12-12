@@ -311,7 +311,11 @@
     },
     "checkout": {
       "shop_policies": {
-        "refund_policy": "Return Policy"
+        "refund_policy": "Return & Refund Policy",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service",
+        "shipping_policy": "Shipping Policy",
+        "terms_of_sale": "Terms of Sale"
       }
     }
   }
