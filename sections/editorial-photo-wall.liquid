@@ -4,28 +4,22 @@
 {% endcomment %}
 
 <style>
-  /* 默认保持你原有的网格布局逻辑 (针对电脑端) */
-  .editorial-collection__grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 假设是12列网格 */
-    gap: 20px; /* 间距 */
-    width: 100%;
-  }
-
-  /* ！！！核心修复代码：针对手机端的样式覆盖！！！ */
+  /* === 核心修复代码：手机端强制单列布局 === */
   @media screen and (max-width: 768px) {
-    /* 1. 把容器改为单列弹性布局 */
+    /* 1. 把容器改为从上到下的弹性布局 */
     .editorial-collection__grid {
       display: flex !important;
-      flex-direction: column;
-      gap: 30px; /* 图片之间的垂直间距 */
+      flex-direction: column !important;
+      gap: 30px !important; /* 图片之间的间距 */
       padding-left: 15px;
       padding-right: 15px;
+      width: 100% !important;
+      box-sizing: border-box;
     }
 
-    /* 2. 强制重置所有图片/文字块的网格坐标 */
+    /* 2. 暴力重置所有图片块的网格坐标 */
     .editorial-collection__grid > div {
-      /* 使用 !important 覆盖掉 Liquid 生成的行内样式 */
+      /* !important 用来覆盖 inline style */
       grid-column: auto !important; 
       grid-row: auto !important;
       width: 100% !important;
@@ -33,17 +27,42 @@
       position: relative !important;
       left: auto !important;
       top: auto !important;
+      transform: none !important;
     }
 
-    /* 3. 隐藏那个在手机上没用的占位符 spacer */
+    /* 3. 隐藏在手机上没用的占位符 */
     .editorial-collection__spacer {
       display: none !important;
     }
     
-    /* 4. 修复文字排版，让它在图片下方或者自然排列 */
+    /* 4. 优化卡片内部布局，确保图片撑满 */
+    .collection-card {
+       width: 100% !important;
+       height: auto !important;
+       min-height: auto !important;
+    }
+    
+    .collection-card__image img {
+       position: relative !important;
+       width: 100% !important;
+       height: auto !important;
+       object-fit: cover;
+    }
+
+    /* 5. 修复文字排版 */
     .collection-card__content {
        width: 100%;
        padding: 10px 0;
+       position: relative !important;
+    }
+  }
+  
+  /* 电脑端保持默认 Grid 布局 */
+  @media screen and (min-width: 769px) {
+    .editorial-collection__grid {
+      display: grid;
+      /* 这里假设你的主题默认定义了 grid，如果没有，可以取消下面这行的注释 */
+      /* grid-template-columns: repeat(12, 1fr); */
     }
   }
 </style>
