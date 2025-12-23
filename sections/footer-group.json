@@ -327,7 +327,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Email: customercare@retrochroma.com</p><p>Tel：+852 6158 8111</p>",
+                    "text": "<p>Email: customercare@retrochroma.com</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -352,7 +352,6 @@
                 "group_iNzwN7": {
                   "type": "group",
                   "name": "Social icons",
-                  "disabled": true,
                   "settings": {
                     "link": "",
                     "open_in_new_tab": false,
@@ -389,9 +388,31 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
+                    "icon_p3cq9C": {
+                      "type": "icon",
+                      "name": "Icon-instagram",
+                      "settings": {
+                        "icon": "instagram",
+                        "width": 28,
+                        "link": "https://www.instagram.com/retro__chroma/",
+                        "open_in_new_tab": true
+                      },
+                      "blocks": {}
+                    },
+                    "icon_MrwHnW": {
+                      "type": "icon",
+                      "name": "Icon-pinterest",
+                      "settings": {
+                        "icon": "pinterest",
+                        "width": 24,
+                        "link": "https://www.pinterest.com/retrochroma25/",
+                        "open_in_new_tab": true
+                      },
+                      "blocks": {}
+                    },
                     "icon_gN6Dkc": {
                       "type": "icon",
-                      "name": "Icon",
+                      "name": "Icon-facebook",
                       "settings": {
                         "icon": "facebook",
                         "width": 28,
@@ -400,18 +421,9 @@
                       },
                       "blocks": {}
                     },
-                    "icon_p3cq9C": {
-                      "type": "icon",
-                      "settings": {
-                        "icon": "instagram",
-                        "width": 28,
-                        "link": "https://www.instagram.com/shopify/",
-                        "open_in_new_tab": false
-                      },
-                      "blocks": {}
-                    },
                     "icon_hQX679": {
                       "type": "icon",
+                      "disabled": true,
                       "settings": {
                         "icon": "tiktok",
                         "width": 28,
@@ -422,6 +434,7 @@
                     },
                     "icon_iQjhzC": {
                       "type": "icon",
+                      "disabled": true,
                       "settings": {
                         "icon": "twitter",
                         "width": 28,
@@ -432,6 +445,7 @@
                     },
                     "icon_cMjXRh": {
                       "type": "icon",
+                      "disabled": true,
                       "settings": {
                         "icon": "youtube",
                         "width": 28,
@@ -442,8 +456,9 @@
                     }
                   },
                   "block_order": [
-                    "icon_gN6Dkc",
                     "icon_p3cq9C",
+                    "icon_MrwHnW",
+                    "icon_gN6Dkc",
                     "icon_hQX679",
                     "icon_iQjhzC",
                     "icon_cMjXRh"
@@ -573,9 +588,9 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Room D07, 8th Floor, Phase II, Kai Tak Factory Building, 99 King Fuk Street, San Po Kong, Hong Kong</p>",
+            "text": "<p>Room D07, 8th Floor, Phase II, Kai Tak Factory Building, 99 King Fuk Street, San Po Kong, Hong Kong</p><p>Tel：+852 6158 8111</p>",
             "width": "100%",
-            "max_width": "normal",
+            "max_width": "none",
             "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
@@ -625,6 +640,7 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
+              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {
@@ -635,10 +651,19 @@
                     "link": "https://www.instagram.com/retro__chroma/"
                   },
                   "blocks": {}
+                },
+                "social_link_NReWkw": {
+                  "type": "_social-link",
+                  "name": "t:names.social_link",
+                  "settings": {
+                    "link": "https://www.pinterest.com/retrochroma25/"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "social_link_ALnJfF"
+                "social_link_ALnJfF",
+                "social_link_NReWkw"
               ]
             }
           },
@@ -648,7 +673,7 @@
           "type": "payment-icons",
           "name": "t:names.payment_icons",
           "settings": {
-            "horizontal_alignment": "flex-end",
+            "horizontal_alignment": "flex-start",
             "gap": 10,
             "padding-block-start": 10,
             "padding-block-end": 0,
