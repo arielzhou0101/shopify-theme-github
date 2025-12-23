@@ -416,8 +416,8 @@
                       "settings": {
                         "icon": "facebook",
                         "width": 28,
-                        "link": "https://www.facebook.com/shopify",
-                        "open_in_new_tab": false
+                        "link": "https://www.facebook.com/profile.php?id=61585642075448",
+                        "open_in_new_tab": true
                       },
                       "blocks": {}
                     },
