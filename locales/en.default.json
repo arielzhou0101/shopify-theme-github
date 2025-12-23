@@ -253,7 +253,7 @@
     "search_results_view_all": "View all",
     "search_results_view_all_button": "View all",
     "seller_note": "Special instructions",
-    "shipping_policy": "Shipping calculated at checkout.",
+    "shipping_policy": "Tax included.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
     "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
