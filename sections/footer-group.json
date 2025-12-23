@@ -627,7 +627,19 @@
               "type": "_footer-social-icons",
               "static": true,
               "settings": {},
-              "blocks": {}
+              "blocks": {
+                "social_link_ALnJfF": {
+                  "type": "_social-link",
+                  "name": "t:names.social_link",
+                  "settings": {
+                    "link": "https://www.instagram.com/retro__chroma/"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "social_link_ALnJfF"
+              ]
             }
           },
           "block_order": []
