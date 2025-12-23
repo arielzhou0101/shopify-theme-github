@@ -413,6 +413,7 @@
                     "icon_gN6Dkc": {
                       "type": "icon",
                       "name": "Icon-facebook",
+                      "disabled": true,
                       "settings": {
                         "icon": "facebook",
                         "width": 28,
@@ -420,48 +421,12 @@
                         "open_in_new_tab": true
                       },
                       "blocks": {}
-                    },
-                    "icon_hQX679": {
-                      "type": "icon",
-                      "disabled": true,
-                      "settings": {
-                        "icon": "tiktok",
-                        "width": 28,
-                        "link": "https://www.tiktok.com/@shopify",
-                        "open_in_new_tab": false
-                      },
-                      "blocks": {}
-                    },
-                    "icon_iQjhzC": {
-                      "type": "icon",
-                      "disabled": true,
-                      "settings": {
-                        "icon": "twitter",
-                        "width": 28,
-                        "link": "https://x.com/shopify",
-                        "open_in_new_tab": false
-                      },
-                      "blocks": {}
-                    },
-                    "icon_cMjXRh": {
-                      "type": "icon",
-                      "disabled": true,
-                      "settings": {
-                        "icon": "youtube",
-                        "width": 28,
-                        "link": "https://www.youtube.com/shopify",
-                        "open_in_new_tab": false
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "icon_p3cq9C",
                     "icon_MrwHnW",
-                    "icon_gN6Dkc",
-                    "icon_hQX679",
-                    "icon_iQjhzC",
-                    "icon_cMjXRh"
+                    "icon_gN6Dkc"
                   ]
                 }
               },
