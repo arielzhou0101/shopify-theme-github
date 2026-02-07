@@ -413,7 +413,6 @@
                     "icon_gN6Dkc": {
                       "type": "icon",
                       "name": "Icon-facebook",
-                      "disabled": true,
                       "settings": {
                         "icon": "facebook",
                         "width": 28,
