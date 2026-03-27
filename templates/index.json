@@ -91,7 +91,7 @@
                 "text_BMWcJT": {
                   "type": "text",
                   "settings": {
-                    "text": "<h3>YOUR HOME DESERVES</h3><h3>A <strong>PLOT TWIST</strong></h3>",
+                    "text": "<h1>YOUR HOME DESERVES</h1><h3>A <strong>PLOT TWIST</strong></h3>",
                     "width": "fit-content",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -488,7 +488,7 @@
             "product_list_text_DQGT8g": {
               "type": "_product-list-text",
               "settings": {
-                "text": "<h3>Top picks</h3>",
+                "text": "<h1>Top picks</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -677,6 +677,7 @@
           ]
         }
       },
+      "disabled": true,
       "settings": {
         "collection": "frontpage",
         "layout_type": "grid",
