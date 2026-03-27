@@ -6,6 +6,30 @@
   <head>
     <meta name="p:domain_verify" content="532b816424e5c8f770c12a0eb9f85f07"/>
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    
+      <!-- 写入internal‼标识，标记内部访问数据 -->
+    <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // 设置 internal
+      if (urlParams.get('internal') === 'true') {
+        document.cookie = "internal_user=true; path=/; max-age=" + 60*60*24*365;
+        localStorage.setItem('internal_user', 'true');
+
+        // 清理 URL（避免污染）
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+
+      // 取消 internal
+      if (urlParams.get('internal') === 'false') {
+        document.cookie = "internal_user=; path=/; max-age=0";
+        localStorage.removeItem('internal_user');
+
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    })();
+    </script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
