@@ -326,6 +326,7 @@
                 "text_dCQwnD": {
                   "type": "text",
                   "name": "t:names.text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>Email: customercare@retrochroma.com</p>",
                     "width": "fit-content",
@@ -552,7 +553,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Room D07, 8th Floor, Phase II, Kai Tak Factory Building, 99 King Fuk Street, San Po Kong, Hong Kong</p><p>Tel：+852 6158 8111</p>",
+            "text": "<p>Flat F, 17/F, Amber Court, Fanling Town Centre, Fanling, New Territories, Hong Kong</p><p>Email: customercare@retrochroma.com</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
